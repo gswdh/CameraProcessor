@@ -1,9 +1,12 @@
 #include "hw_int.h"
 
 #include "xspips.h"
+#include "xgpio.h"
 
 static XSpiPs inst_spi_0 = {0};
 static XSpiPs inst_spi_1 = {0};
+
+static XGpio inst_gpio_0 = {0};
 
 static void hwi_spi0_init()
 {
@@ -41,7 +44,12 @@ static void hwi_spi1_init()
 
 static void hwi_gpioevf_init()
 {
+	// EVF GPIO
+	int32_t status = XGpio_Initialize(&inst_gpio_0, XPAR_AXI_EVF_GPIO_1_DEVICE_ID);
+	if (status != XST_SUCCESS) return;
 
+	// Set this channel (EVF only have one channel) as an output
+	XGpio_SetDataDirection(&inst_gpio_0, 0, GPIO_DIR_OUTPUT);
 }
 
 void hwi_init()
@@ -72,21 +80,23 @@ void hwi_spi1_transfer(uint8_t * tx_data, uint8_t * rx_data, uint32_t len)
 
 void ecx_spi_transfer(uint8_t * tx_data, uint8_t * rx_data, uint32_t len) 
 {
-	return;
+	hwi_spi0_transfer(tx_data, rx_data, len);
 }
 
-void ecx_reset(bool enable)
+void ecx_enable_reset(bool enable)
 {
-	return;
+	if(!enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_NRST);
+	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_NRST);
 }
 
 void ecx_enable_1V8(bool enable)
 {
-	return;
+	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_1V8_EN);
+	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_1V8_EN);
 }
 
 void ecx_enable_10V(bool enable)
 {
-	return;
+	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_10V_EN);
+	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_10V_EN);
 }
-

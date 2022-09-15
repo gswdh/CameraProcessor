@@ -25050,3 +25050,51 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-22: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 20:13:40.718
 !MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:09.480
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss ], Thread: Worker-42: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:09.550
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss ], Result: [null, ]. Thread: Worker-42: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:09.550
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Thread: Worker-42: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:09.591
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.7",
+}]. Thread: Worker-42: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 1 0 2022-09-15 21:28:09.591
+!MESSAGE Generating MD5 hash for file: C:\Users\georgewaller\Desktop\CameraProcessor\platform\export\platform\sw\platform\freertos10_xilinx_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:09.601
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Thread: Worker-42: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:09.601
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Result: [null, ]. Thread: Worker-42: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:58.240
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss ], Thread: Worker-54: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:58.256
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss ], Result: [null, ]. Thread: Worker-54: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:58.256
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Thread: Worker-54: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:58.272
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/hw/microzed_base_wrapper.xsa C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.7",
+}]. Thread: Worker-54: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 1 0 2022-09-15 21:28:58.272
+!MESSAGE Generating MD5 hash for file: C:\Users\georgewaller\Desktop\CameraProcessor\platform\export\platform\sw\platform\freertos10_xilinx_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:58.272
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Thread: Worker-54: Building Workspace
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-15 21:28:58.288
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/system.mss], Result: [null, ]. Thread: Worker-54: Building Workspace
