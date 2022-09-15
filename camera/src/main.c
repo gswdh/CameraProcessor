@@ -1,3 +1,6 @@
+// MAIN!
+#include "main.h"
+
 // FreeRTOS includes
 #include "FreeRTOS.h"
 #include "task.h"
@@ -9,12 +12,16 @@
 #include "xparameters.h"
 
 // Driver includes
+#include "hw_int.h"
 #include "ecx.h"
 
 int main(void)
 {
     // Start init
     xil_printf("Camera starting.\n");
+
+    // Init the hardware
+    hwi_init();
 
     // Init the EVF
     ecx_init();
