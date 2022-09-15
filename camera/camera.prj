@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="camera" location="C:/Users/georgewaller/Desktop/CameraProcessor/camera" platform="C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm" platformUID="xilinx:microzed_7010::0.0(custom)" systemProject="camera_system" sysConfig="platform" runtime="C/C++" cpu="freertos10_xilinx_domain" cpuInstance="ps7_cortexa9_0" os="freertos10_xilinx" mssSignature="0fbc96b0190d8f1019e22433bbb96297">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.771665914">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.981312382" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_hello_world"/>
+</sdkproject:SdkProject>

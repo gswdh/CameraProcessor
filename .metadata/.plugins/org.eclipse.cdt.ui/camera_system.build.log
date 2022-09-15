@@ -1,0 +1,10 @@
+18:57:02 **** Incremental Build of configuration Debug for project camera_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 62007 C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm freertos10_xilinx_domain C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm --sys_config platform --bif C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif --bitstream C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit --elf C:/Users/georgewaller/Desktop/CameraProcessor/camera/Debug/camera.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+18:57:08 Build Finished (took 6s.90ms)
+

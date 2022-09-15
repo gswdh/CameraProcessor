@@ -1,0 +1,40 @@
+Nothing to build in platform 'platform'
+
+18:57:00 **** Clean-only build of configuration Debug for project camera ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  camera.elf.size  camera.elf
+' '
+18:57:00 **** Incremental Build of configuration Debug for project camera ****
+make all 
+C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory main-build
+'Building file: ../src/ecx.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/ecx.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/ecx.d" -MT"src/ecx.o" -o "src/ecx.o" "../src/ecx.c"
+'Finished building: ../src/ecx.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: camera.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bsplib/lib -o "camera.elf"  ./src/ecx.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: camera.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size camera.elf  |tee "camera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69304	   3332	  88720	 161356	  2764c	camera.elf
+'Finished building: camera.elf.size'
+' '
+18:57:02 **** Incremental Build of configuration Debug for project camera_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 62007 C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm freertos10_xilinx_domain C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm --sys_config platform --bif C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif --bitstream C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit --elf C:/Users/georgewaller/Desktop/CameraProcessor/camera/Debug/camera.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
