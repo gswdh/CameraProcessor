@@ -2,6 +2,7 @@
 
 #include "xspips.h"
 #include "xgpio.h"
+#include "FreeRTOS.h"
 
 static XSpiPs inst_spi_0 = {0};
 static XSpiPs inst_spi_1 = {0};
@@ -99,4 +100,9 @@ void ecx_enable_10V(bool enable)
 {
 	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_10V_EN);
 	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_10V_EN);
+}
+
+void ecx_delay_ms(uint32_t time_ms)
+{
+	vTaskDelay(time_ms / portTICK_PERIOD_MS);
 }
