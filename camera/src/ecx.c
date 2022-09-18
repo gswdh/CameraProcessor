@@ -85,8 +85,8 @@ void ecx_init()
 	ecx_reset(false);
 	ecx_delay_ms(1);
 
-	// 3. Executing serial setting 1. (Sending data, from 0x01 to 0x81.)
-	ecx_write_reg(0x01, (uint8_t*)ecx_config, sizeof(ecx_config));
+	// 3. Executing serial setting 1.
+	ecx_write_reg(0x00, (uint8_t*)ecx_config, sizeof(ecx_config));
 
 	// 4. Executing PS0 (Power-saving)-off by serial setting 2, 200usec later, it can be valid to input data . 
 	ecx_exit_ps0();

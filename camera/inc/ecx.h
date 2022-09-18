@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdbool.h>
 
+extern const uint8_t * ecx_conf;
+
 // Need to be implemented by the system
 void ecx_spi_transfer(uint8_t * tx_data, uint8_t * rx_data, uint32_t len);
 void ecx_reset(bool enable);
