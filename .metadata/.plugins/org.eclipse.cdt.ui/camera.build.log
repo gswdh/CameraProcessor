@@ -1,4 +1,4 @@
-16:39:56 **** Incremental Build of configuration Debug for project camera ****
+16:46:51 **** Incremental Build of configuration Debug for project camera ****
 make all 
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -31,9 +31,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size camera.elf  |tee "camera.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  77104	   3392	  88832	 169328	  29570	camera.elf
+  77284	   3392	  88832	 169508	  29624	camera.elf
 'Finished building: camera.elf.size'
 ' '
 
-16:39:59 Build Finished (took 2s.141ms)
+16:46:54 Build Finished (took 2s.203ms)
 

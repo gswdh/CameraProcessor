@@ -4,6 +4,7 @@
 #include "xgpio.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "sleep.h"
 
 static XSpiPs inst_spi_0 = {0};
 static XSpiPs inst_spi_1 = {0};
@@ -51,7 +52,7 @@ static void hwi_gpioevf_init()
 	if (status != XST_SUCCESS) return;
 
 	// Set this channel (EVF only have one channel) as an output
-	XGpio_SetDataDirection(&inst_gpio_0, 0, GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&inst_gpio_0, 1, GPIO_DIR_OUTPUT);
 }
 
 void hwi_init()
@@ -87,23 +88,23 @@ void ecx_spi_transfer(uint8_t * tx_data, uint8_t * rx_data, uint32_t len)
 
 void ecx_enable_reset(bool enable)
 {
-	if(!enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_NRST);
-	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_NRST);
+	if(!enable) XGpio_DiscreteWrite(&inst_gpio_0, 1, GPIO_EVF_NRST);
+	else XGpio_DiscreteClear(&inst_gpio_0, 1, GPIO_EVF_NRST);
 }
 
 void ecx_enable_1V8(bool enable)
 {
-	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_1V8_EN);
-	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_1V8_EN);
+	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 1, GPIO_EVF_1V8_EN);
+	else XGpio_DiscreteClear(&inst_gpio_0, 1, GPIO_EVF_1V8_EN);
 }
 
 void ecx_enable_10V(bool enable)
 {
-	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_10V_EN);
-	else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_10V_EN);
+	if(enable) XGpio_DiscreteWrite(&inst_gpio_0, 1, GPIO_EVF_10V_EN);
+	else XGpio_DiscreteClear(&inst_gpio_0, 1, GPIO_EVF_10V_EN);
 }
 
 void ecx_delay_ms(uint32_t time_ms)
 {
-	vTaskDelay(time_ms / portTICK_PERIOD_MS);
+	usleep(time_ms * 1000);
 }
