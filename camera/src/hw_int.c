@@ -3,6 +3,7 @@
 #include "xspips.h"
 #include "xgpio.h"
 #include "FreeRTOS.h"
+#include "task.h"
 
 static XSpiPs inst_spi_0 = {0};
 static XSpiPs inst_spi_1 = {0};

@@ -4,9 +4,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdbool.h>
-#include <stdlib.h>
 
-extern const uint8_t ecx_conf[126];
+extern const uint8_t * ecx_conf;
 
 // Need to be implemented by the system
 void ecx_spi_transfer(uint8_t * tx_data, uint8_t * rx_data, uint32_t len);
@@ -20,7 +19,7 @@ void ecx_init();
 void ecx_deinit();
 
 // Private
-static void ecx_exit_ps0();
+static void ecx_exit_ps0()
 static void ecx_exit_ps1();
 static void ecx_write_reg(uint8_t reg, uint8_t * data, uint32_t len);
 static void ecx_read_reg(uint8_t reg, uint8_t * data, uint32_t len);

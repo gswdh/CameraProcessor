@@ -1,7 +1,5 @@
 #include "ecx.h"
 
-static const uint8_t ecx_config[] = {0};
-
 __attribute__((weak)) void ecx_spi_transfer(uint8_t * tx_data, uint8_t * rx_data, uint32_t len) 
 {
 	return;
@@ -86,7 +84,7 @@ void ecx_init()
 	ecx_delay_ms(1);
 
 	// 3. Executing serial setting 1.
-	ecx_write_reg(0x00, (uint8_t*)ecx_config, sizeof(ecx_config));
+	ecx_write_reg(0x00, (uint8_t*)ecx_conf, sizeof(ecx_conf));
 
 	// 4. Executing PS0 (Power-saving)-off by serial setting 2, 200usec later, it can be valid to input data . 
 	ecx_exit_ps0();

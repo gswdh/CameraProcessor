@@ -1,131 +1,42 @@
 Nothing to build in platform 'platform'
 
-20:13:40 **** Incremental Build of configuration Debug for project camera ****
+16:39:56 **** Incremental Build of configuration Debug for project camera ****
 make all 
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory main-build
-'Building file: ../src/ecx.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/ecx.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/ecx.d" -MT"src/ecx.o" -o "src/ecx.o" "../src/ecx.c"
-../src/ecx.c:28:13: warning: 'ecx_load_regs' defined but not used [-Wunused-function]
-   28 | static void ecx_load_regs()
-      |             ^~~~~~~~~~~~~
-'Finished building: ../src/ecx.c'
-' '
 'Building file: ../src/hw_int.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/hw_int.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/hw_int.d" -MT"src/hw_int.o" -o "src/hw_int.o" "../src/hw_int.c"
 In file included from C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/hw_int.h:7,
                  from ../src/hw_int.c:1:
-C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:17:13: warning: 'ecx_load_regs' declared 'static' but never defined [-Wunused-function]
-   17 | static void ecx_load_regs();
+C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:23:13: warning: 'ecx_exit_ps0' declared 'static' but never defined [-Wunused-function]
+   23 | static void ecx_exit_ps0();
+      |             ^~~~~~~~~~~~
+C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:24:13: warning: 'ecx_exit_ps1' declared 'static' but never defined [-Wunused-function]
+   24 | static void ecx_exit_ps1();
+      |             ^~~~~~~~~~~~
+C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:25:13: warning: 'ecx_write_reg' declared 'static' but never defined [-Wunused-function]
+   25 | static void ecx_write_reg(uint8_t reg, uint8_t * data, uint32_t len);
       |             ^~~~~~~~~~~~~
+C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:26:13: warning: 'ecx_read_reg' declared 'static' but never defined [-Wunused-function]
+   26 | static void ecx_read_reg(uint8_t reg, uint8_t * data, uint32_t len);
+      |             ^~~~~~~~~~~~
 'Finished building: ../src/hw_int.c'
 ' '
 'Building target: camera.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bsplib/lib -o "camera.elf"  ./src/ecx.o ./src/hw_int.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bsplib/lib -o "camera.elf"  ./src/ecx.o ./src/ecx_conf.o ./src/hw_int.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
 'Finished building target: camera.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size camera.elf  |tee "camera.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  74540	   3360	  88816	 166716	  28b3c	camera.elf
+  77104	   3392	  88832	 169328	  29570	camera.elf
 'Finished building: camera.elf.size'
 ' '
-20:13:42 **** Incremental Build of configuration Debug for project camera_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 62007 C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm freertos10_xilinx_domain C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif
-sdcard_gen --xpfm C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm --sys_config platform --bif C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif --bitstream C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit --elf C:/Users/georgewaller/Desktop/CameraProcessor/camera/Debug/camera.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit
-Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
-Nothing to build in platform 'platform'
-
-21:28:09 **** Incremental Build of configuration Debug for project camera ****
-make all 
-C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory main-build
-'Building file: ../src/hw_int.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/hw_int.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/hw_int.d" -MT"src/hw_int.o" -o "src/hw_int.o" "../src/hw_int.c"
-../src/hw_int.c:8:8: error: unknown type name 'XGpio'
-    8 | static XGpio inst_gpio_0 = {0};
-      |        ^~~~~
-../src/hw_int.c: In function 'hwi_gpioevf_init':
-../src/hw_int.c:47:19: warning: implicit declaration of function 'XGpio_Initialize'; did you mean 'XSpiPs_CfgInitialize'? [-Wimplicit-function-declaration]
-   47 |  int32_t status = XGpio_Initialize(&inst_gpio_0, XPAR_AXI_EVF_GPIO_1_DEVICE_ID);
-      |                   ^~~~~~~~~~~~~~~~
-      |                   XSpiPs_CfgInitialize
-../src/hw_int.c:51:2: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
-   51 |  XGpio_SetDataDirection(&inst_gpio_0, 0, GPIO_DIR_OUTPUT);
-      |  ^~~~~~~~~~~~~~~~~~~~~~
-../src/hw_int.c: In function 'ecx_enable_reset':
-../src/hw_int.c:87:14: warning: implicit declaration of function 'XGpio_DiscreteWrite' [-Wimplicit-function-declaration]
-   87 |  if(!enable) XGpio_DiscreteWrite(&inst_gpio_0, 0, GPIO_EVF_NRST);
-      |              ^~~~~~~~~~~~~~~~~~~
-../src/hw_int.c:88:7: warning: implicit declaration of function 'XGpio_DiscreteClear' [-Wimplicit-function-declaration]
-   88 |  else XGpio_DiscreteClear(&inst_gpio_0, 0, GPIO_EVF_NRST);
-      |       ^~~~~~~~~~~~~~~~~~~
-In file included from C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/hw_int.h:7,
-                 from ../src/hw_int.c:1:
-../src/hw_int.c: At top level:
-C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:17:13: warning: 'ecx_load_regs' declared 'static' but never defined [-Wunused-function]
-   17 | static void ecx_load_regs();
-      |             ^~~~~~~~~~~~~
-make[1]: *** [src/subdir.mk:29: src/hw_int.o] Error 1
-make: *** [makefile:34: all] Error 2
-21:28:13 **** Incremental Build of configuration Debug for project camera_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 62007 C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm freertos10_xilinx_domain C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif
-sdcard_gen --xpfm C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm --sys_config platform --bif C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif --bitstream C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit --elf C:/Users/georgewaller/Desktop/CameraProcessor/camera/Debug/camera.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/Users/georgewaller/Desktop/CameraProcessor/camera/_ide/bitstream/microzed_base_wrapper.bit
-Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
-Nothing to build in platform 'platform'
-
-21:28:58 **** Incremental Build of configuration Debug for project camera ****
-make all 
-C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
-a9-linaro-pre-build-step
-' '
-C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory main-build
-'Building file: ../src/hw_int.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/hw_int.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/hw_int.d" -MT"src/hw_int.o" -o "src/hw_int.o" "../src/hw_int.c"
-In file included from C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/hw_int.h:7,
-                 from ../src/hw_int.c:1:
-C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:17:13: warning: 'ecx_load_regs' declared 'static' but never defined [-Wunused-function]
-   17 | static void ecx_load_regs();
-      |             ^~~~~~~~~~~~~
-'Finished building: ../src/hw_int.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/hw_int.h:7,
-                 from ../src/main.c:15:
-C:\Users\georgewaller\Desktop\CameraProcessor\camera\inc/ecx.h:17:13: warning: 'ecx_load_regs' declared 'static' but never defined [-Wunused-function]
-   17 | static void ecx_load_regs();
-      |             ^~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: camera.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/sw/platform/freertos10_xilinx_domain/bsplib/lib -o "camera.elf"  ./src/ecx.o ./src/hw_int.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: camera.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size camera.elf  |tee "camera.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  76308	   3392	  88832	 168532	  29254	camera.elf
-'Finished building: camera.elf.size'
-' '
-21:29:04 **** Incremental Build of configuration Debug for project camera_system ****
+16:39:59 **** Incremental Build of configuration Debug for project camera_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 62007 C:/Users/georgewaller/Desktop/CameraProcessor/platform/export/platform/platform.xpfm freertos10_xilinx_domain C:/Users/georgewaller/Desktop/CameraProcessor/camera_system/Debug/system.bif
