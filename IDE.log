@@ -1,0 +1,326 @@
+20:55:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\georgewaller\Desktop\CameraProcessor\temp_xsdb_launch_script.tcl
+20:55:15 INFO  : Registering command handlers for Vitis TCF services
+20:55:18 INFO  : Platform repository initialization has completed.
+20:55:18 INFO  : XSCT server has started successfully.
+20:55:19 INFO  : Successfully done setting XSCT server connection channel  
+20:55:19 INFO  : plnx-install-location is set to ''
+20:55:19 INFO  : Successfully done query RDI_DATADIR 
+20:55:19 INFO  : Successfully done setting workspace for the tool. 
+20:56:21 INFO  : Result from executing command 'getProjects': camera
+20:56:21 INFO  : Result from executing command 'getPlatforms': 
+20:56:21 WARN  : An unexpected exception occurred in the module 'platform project logging'
+20:56:22 INFO  : Platform 'camera' is added to custom repositories.
+20:56:28 ERROR : 
+org.eclipse.core.runtime.CoreException: CDT Project already configured
+	at org.eclipse.cdt.internal.core.settings.model.ExceptionFactory.createCoreException(ExceptionFactory.java:26)
+	at org.eclipse.cdt.core.CCorePlugin.mapCProjectOwner(CCorePlugin.java:890)
+	at org.eclipse.cdt.core.CCorePlugin$1.run(CCorePlugin.java:945)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.cdt.core.CCorePlugin.createCProject(CCorePlugin.java:930)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createCProject(AppCreationHandler.java:92)
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:67)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:235)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:374)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: CDT Project already configured
+	at org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.configure(CConfigBasedDescriptorManager.java:160)
+	at org.eclipse.cdt.core.CCorePlugin.mapCProjectOwner(CCorePlugin.java:885)
+	... 20 more
+20:56:29 ERROR : Failed to create application project
+org.eclipse.core.runtime.CoreException: CDT Project already configured
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:150)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79)
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:235)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:374)
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+20:56:29 ERROR : An unexpected exception occurred in the module 'reading platform'
+20:56:29 ERROR : Unexpected exception occurred while writing platform project 'camera' log.
+20:57:31 INFO  : Result from executing command 'getProjects': camera
+20:57:31 INFO  : Result from executing command 'getPlatforms': 
+20:57:31 INFO  : Platform 'camera' is added to custom repositories.
+20:57:39 INFO  : Platform 'camera' is added to custom repositories.
+20:58:23 INFO  : Result from executing command 'getProjects': camera
+20:58:23 INFO  : Result from executing command 'getPlatforms': camera|C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/camera.xpfm
+20:58:23 INFO  : Checking for BSP changes to sync application flags for project 'pss'...
+20:59:43 INFO  : Result from executing command 'getProjects': camera
+20:59:43 INFO  : Result from executing command 'getPlatforms': 
+20:59:43 INFO  : Platform 'camera' is added to custom repositories.
+20:59:52 INFO  : Platform 'camera' is added to custom repositories.
+21:01:34 INFO  : Result from executing command 'getProjects': camera
+21:01:34 INFO  : Result from executing command 'getPlatforms': camera|C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/camera.xpfm
+21:01:34 INFO  : Checking for BSP changes to sync application flags for project 'pss'...
+21:02:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:02:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:02:59 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+21:03:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:03:08 INFO  : Jtag cable 'Digilent JTAG-HS3 210299A8DD1E' is selected.
+21:03:08 INFO  : 'jtag frequency' command is executed.
+21:03:08 INFO  : Context for 'APU' is selected.
+21:03:08 INFO  : System reset is completed.
+21:03:11 INFO  : 'after 3000' command is executed.
+21:03:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}' command is executed.
+21:03:14 INFO  : Device configured successfully with "C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit"
+21:03:14 INFO  : Context for 'APU' is selected.
+21:03:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa'.
+21:03:14 INFO  : 'configparams force-mem-access 1' command is executed.
+21:03:14 INFO  : Context for 'APU' is selected.
+21:03:14 INFO  : Sourcing of 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl' is done.
+21:03:16 INFO  : 'ps7_init' command is executed.
+21:03:16 INFO  : 'ps7_post_config' command is executed.
+21:03:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:03:16 INFO  : The application 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:03:17 INFO  : 'configparams force-mem-access 0' command is executed.
+21:03:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}
+fpga -file C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:03:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:03:17 INFO  : 'con' command is executed.
+21:03:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:03:17 INFO  : Launch script is exported to file 'C:\Users\georgewaller\Desktop\CameraProcessor\pss_system\_ide\scripts\systemdebugger_pss_system_standalone.tcl'
+21:03:48 INFO  : Disconnected from the channel tcfchan#5.
+21:03:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:03:52 INFO  : Jtag cable 'Digilent JTAG-HS3 210299A8DD1E' is selected.
+21:03:52 INFO  : 'jtag frequency' command is executed.
+21:03:52 INFO  : Context for 'APU' is selected.
+21:03:53 INFO  : System reset is completed.
+21:03:56 INFO  : 'after 3000' command is executed.
+21:03:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}' command is executed.
+21:04:01 INFO  : Device configured successfully with "C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit"
+21:04:01 INFO  : Context for 'APU' is selected.
+21:04:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa'.
+21:04:07 INFO  : 'configparams force-mem-access 1' command is executed.
+21:04:07 INFO  : Context for 'APU' is selected.
+21:04:07 INFO  : Sourcing of 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl' is done.
+21:04:10 INFO  : 'ps7_init' command is executed.
+21:04:10 INFO  : 'ps7_post_config' command is executed.
+21:04:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:04:11 INFO  : The application 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:04:11 INFO  : 'configparams force-mem-access 0' command is executed.
+21:04:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}
+fpga -file C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:04:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:04:12 INFO  : 'con' command is executed.
+21:04:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:04:12 INFO  : Launch script is exported to file 'C:\Users\georgewaller\Desktop\CameraProcessor\pss_system\_ide\scripts\systemdebugger_pss_system_standalone.tcl'
+21:09:42 INFO  : Result from executing command 'getProjects': camera
+21:09:42 INFO  : Result from executing command 'getPlatforms': camera|C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/camera.xpfm
+21:09:43 INFO  : Checking for BSP changes to sync application flags for project 'pss'...
+21:09:57 INFO  : Disconnected from the channel tcfchan#6.
+21:09:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:09:57 INFO  : Jtag cable 'Digilent JTAG-HS3 210299A8DD1E' is selected.
+21:09:57 INFO  : 'jtag frequency' command is executed.
+21:09:57 INFO  : Context for 'APU' is selected.
+21:09:58 INFO  : System reset is completed.
+21:10:01 INFO  : 'after 3000' command is executed.
+21:10:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}' command is executed.
+21:10:04 INFO  : Device configured successfully with "C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit"
+21:10:04 INFO  : Context for 'APU' is selected.
+21:10:04 INFO  : Hardware design and registers information is loaded from 'C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa'.
+21:10:04 INFO  : 'configparams force-mem-access 1' command is executed.
+21:10:04 INFO  : Context for 'APU' is selected.
+21:10:04 INFO  : Sourcing of 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl' is done.
+21:10:05 INFO  : 'ps7_init' command is executed.
+21:10:05 INFO  : 'ps7_post_config' command is executed.
+21:10:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:06 INFO  : The application 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:10:06 INFO  : 'configparams force-mem-access 0' command is executed.
+21:10:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}
+fpga -file C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:10:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:06 INFO  : 'con' command is executed.
+21:10:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:10:06 INFO  : Launch script is exported to file 'C:\Users\georgewaller\Desktop\CameraProcessor\pss_system\_ide\scripts\systemdebugger_pss_system_standalone.tcl'
+21:12:58 INFO  : No changes in MSS file content so sources will not be generated.
+21:13:34 INFO  : Disconnected from the channel tcfchan#9.
+21:13:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:34 INFO  : Jtag cable 'Digilent JTAG-HS3 210299A8DD1E' is selected.
+21:13:34 INFO  : 'jtag frequency' command is executed.
+21:13:34 INFO  : Context for 'APU' is selected.
+21:13:35 INFO  : System reset is completed.
+21:13:38 INFO  : 'after 3000' command is executed.
+21:13:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}' command is executed.
+21:13:41 INFO  : Device configured successfully with "C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit"
+21:13:41 INFO  : Context for 'APU' is selected.
+21:13:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa'.
+21:13:41 INFO  : 'configparams force-mem-access 1' command is executed.
+21:13:41 INFO  : Context for 'APU' is selected.
+21:13:41 INFO  : Sourcing of 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl' is done.
+21:13:42 INFO  : 'ps7_init' command is executed.
+21:13:42 INFO  : 'ps7_post_config' command is executed.
+21:13:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:43 INFO  : The application 'C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:13:43 INFO  : 'configparams force-mem-access 0' command is executed.
+21:13:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}
+fpga -file C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/bitstream/camera.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/georgewaller/Desktop/CameraProcessor/pss/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/georgewaller/Desktop/CameraProcessor/pss/Debug/pss.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:13:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:43 INFO  : 'con' command is executed.
+21:13:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:13:43 INFO  : Launch script is exported to file 'C:\Users\georgewaller\Desktop\CameraProcessor\pss_system\_ide\scripts\systemdebugger_pss_system_standalone.tcl'
+21:13:55 INFO  : Disconnected from the channel tcfchan#10.
+21:16:00 INFO  : Result from executing command 'getProjects': camera
+21:16:00 INFO  : Result from executing command 'getPlatforms': camera|C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/camera.xpfm
+21:16:00 INFO  : Checking for BSP changes to sync application flags for project 'pss_ddr_test'...
+21:16:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:35 INFO  : Jtag cable 'Digilent JTAG-HS3 210299A8DD1E' is selected.
+21:16:35 INFO  : 'jtag frequency' command is executed.
+21:16:35 INFO  : Context for 'APU' is selected.
+21:16:36 INFO  : System reset is completed.
+21:16:39 INFO  : 'after 3000' command is executed.
+21:16:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}' command is executed.
+21:16:42 INFO  : Device configured successfully with "C:/Users/georgewaller/Desktop/CameraProcessor/pss_ddr_test/_ide/bitstream/camera.bit"
+21:16:42 INFO  : Context for 'APU' is selected.
+21:16:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa'.
+21:16:42 INFO  : 'configparams force-mem-access 1' command is executed.
+21:16:42 INFO  : Context for 'APU' is selected.
+21:16:42 INFO  : Sourcing of 'C:/Users/georgewaller/Desktop/CameraProcessor/pss_ddr_test/_ide/psinit/ps7_init.tcl' is done.
+21:16:43 INFO  : 'ps7_init' command is executed.
+21:16:43 INFO  : 'ps7_post_config' command is executed.
+21:16:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:45 INFO  : The application 'C:/Users/georgewaller/Desktop/CameraProcessor/pss_ddr_test/Debug/pss_ddr_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:16:45 INFO  : 'configparams force-mem-access 0' command is executed.
+21:16:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299A8DD1E" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299A8DD1E-23728093-0"}
+fpga -file C:/Users/georgewaller/Desktop/CameraProcessor/pss_ddr_test/_ide/bitstream/camera.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/hw/camera.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/georgewaller/Desktop/CameraProcessor/pss_ddr_test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/georgewaller/Desktop/CameraProcessor/pss_ddr_test/Debug/pss_ddr_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:16:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:45 INFO  : 'con' command is executed.
+21:16:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:16:45 INFO  : Launch script is exported to file 'C:\Users\georgewaller\Desktop\CameraProcessor\pss_ddr_test_system\_ide\scripts\systemdebugger_pss_ddr_test_system_standalone.tcl'

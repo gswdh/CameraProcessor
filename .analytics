@@ -1,0 +1,18 @@
+timestamp=[2023-09-21 20:55:13], mode=WORKBENCH_START, duration=0:00:06.334, duration_ms=6334, data={}
+timestamp=[2023-09-21 20:55:14], mode=WORKBENCH_UI_INIT, duration=0:00:00.673, duration_ms=673, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2023-09-21 20:55:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.756, duration_ms=2756, data={}
+timestamp=[2023-09-21 20:56:29], mode=APP_CREATION, duration=0:00:33.288, duration_ms=33288, data={name=camera, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=C:\Users\georgewaller\Desktop\CameraProcessor\camera\export\camera\camera.xpfm, application_type=application}
+timestamp=[2023-09-21 20:57:39], mode=APP_CREATION, duration=0:00:20.568, duration_ms=20568, data={name=pss, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=camera, application_type=application}
+timestamp=[2023-09-21 20:58:23], mode=PLATFORM_GENERATION, duration=0:00:24.564, duration_ms=24564, data={name=camera}
+timestamp=[2023-09-21 20:58:29], mode=BUILD, duration=0:00:05.697, duration_ms=5697, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-21 20:59:51], mode=APP_CREATION, duration=0:00:23.929, duration_ms=23929, data={name=pss, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=camera, application_type=application}
+timestamp=[2023-09-21 21:01:34], mode=PLATFORM_GENERATION, duration=0:00:55.731, duration_ms=55731, data={name=camera}
+timestamp=[2023-09-21 21:01:43], mode=BUILD, duration=0:00:08.193, duration_ms=8193, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-21 21:02:04], mode=BUILD, duration=0:00:20.900, duration_ms=20900, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-21 21:09:43], mode=PLATFORM_GENERATION, duration=0:00:03.540, duration_ms=3540, data={name=camera}
+timestamp=[2023-09-21 21:09:44], mode=BUILD, duration=0:00:01.162, duration_ms=1162, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-21 21:09:52], mode=BUILD, duration=0:00:07.780, duration_ms=7780, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-21 21:15:10], mode=APP_CREATION, duration=0:00:18.841, duration_ms=18841, data={name=pss_ddr_test, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=camera, application_type=application}
+timestamp=[2023-09-21 21:16:00], mode=PLATFORM_GENERATION, duration=0:00:03.463, duration_ms=3463, data={name=camera}
+timestamp=[2023-09-21 21:16:02], mode=BUILD, duration=0:00:01.363, duration_ms=1363, data={name=pss_ddr_test, configuration=Debug, clean_build=false}
+timestamp=[2023-09-21 21:16:10], mode=BUILD, duration=0:00:07.448, duration_ms=7448, data={name=pss_ddr_test_system, configuration=Debug, clean_build=false}
