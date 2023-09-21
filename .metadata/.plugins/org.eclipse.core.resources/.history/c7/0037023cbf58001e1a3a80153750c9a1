@@ -1,0 +1,35 @@
+#include "sun.h"
+
+#include <math.h>
+
+#include "lst.h"
+
+equatorial_t sun_equatorial_coords(struct tm dt)
+{
+    double days = lst_day_number_2k(dt);
+    double t = days / 36525;
+
+    double L1 = aam_deg_wrap_360(280.466 + 36000.8 * t);
+    double M1 = aam_deg_wrap_360((357.529 + 35999 * t) - (0.0001536 * t * t) + (t * t * t / 24490000));
+
+    double C1 = (1.915 - (0.004817 * t) - (0.000014 * t * t)) * sin(DEG2RAD(M1));
+
+    C1 = C1 + (0.01999 - (0.000101 * t)) * sin(DEG2RAD(2 * M1));
+    C1 = C1 + 0.00029 * sin(DEG2RAD(3 * M1));
+    double Th1 = L1 + C1;
+    double Obl = (84381.448 - (46.815 * t)) / 3600;
+
+    double Ra1 = RAD2DEG(atan2(sin(DEG2RAD(Th1)) * cos(DEG2RAD(Obl)), cos(DEG2RAD(Th1))));
+    double Dec1 = RAD2DEG(asin(sin(DEG2RAD(Obl)) * sin(DEG2RAD(Th1))));
+
+    equatorial_t ret = { 0 };
+
+    ret.delta = Dec1;
+    ret.alpha = aam_deg_wrap_360(360 + Ra1);
+    return ret;
+}
+
+ecliptical_t sun_ecliptical_coords(struct tm dt)
+{
+    return aam_equatorial2ecliptical(sun_equatorial_coords(dt));
+}

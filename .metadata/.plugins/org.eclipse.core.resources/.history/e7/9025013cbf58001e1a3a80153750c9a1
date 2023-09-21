@@ -1,0 +1,48 @@
+import datetime
+import math
+import numpy as np
+
+import aamaths as aam 
+
+def julian_day(dt):
+    extra = (100.0*dt.year + dt.month) - 190002.5
+    jday  = 367.0*dt.year
+    jday -= math.floor(7.0*(dt.year+math.floor((dt.month+9.0)/12.0))/4.0)
+    jday += math.floor(275.0*dt.month/9.0)
+    jday += dt.day
+    jday += dt.hour/24.0
+    jday += dt.minute/(24.0 * 60)
+    jday += 1721013.5
+    jday -= 0.5*extra/abs(extra)
+    jday += 0.5
+    return jday
+
+def day_number_2k(dt):
+    jd = julian_day(dt)
+    return jd - 2451543.5
+
+def local_sidereal_time(dt, timezone, longitude):
+    ut  = aam.mod_day(dt.hour + (dt.minute / 60) - timezone)
+    dno = day_number_2k(dt)
+    ws  = aam.mod_2pi(282.9404 + (4.70935 * pow(10.0, -5) * dno))
+    ms  = aam.mod_2pi(356.0470 + (0.9856002585 * dno))
+    meanlong = aam.mod_2pi(ms + ws)
+    gmst0 = (meanlong) / 15.0
+    arg = gmst0 + ut + ((longitude+1) / 15.0)
+    lst = aam.mod_day(arg) + 11.0 + (56.0 / 60.0)
+    if lst >= 24.0:
+    	lst = lst - 24.0
+    return lst * 15
+
+def test():
+    dt = datetime.datetime(year=2023, month=2, day=15, hour=16, minute=25)
+    print(dt)
+    print('dir\tlng\tlst_deg\tlst_hrs(hh:mm)')
+    for lng in np.arange(83, 84, 1):
+        lst_deg = local_sidereal_time(dt, 7, lng)
+        lst_hrs = lst_deg / 15
+        d = 'E' if lng > 0 else 'W'
+        print(f'{abs(lng)} {d}\t{lng}\t{round(lst_deg, 2)}\t{int(lst_hrs)}:{int((lst_hrs%1)*60)}')
+
+if __name__ == '__main__':
+	test()

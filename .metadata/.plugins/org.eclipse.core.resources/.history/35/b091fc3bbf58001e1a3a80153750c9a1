@@ -1,0 +1,32 @@
+import pandas as pd
+
+file_out = 'coefs.h'
+
+moon_coef_47a = pd.read_csv('coefs/moon_coef_47a.csv')
+moon_coef_47b = pd.read_csv('coefs/moon_coef_47b.csv')
+
+f = open(file_out, 'w+')
+
+f.write('#ifndef __COF__\n#define __COF__\n\nstruct moon_s\n{\n\tint D, M, Md, F;\n\tdouble A, B;\n};\ntypedef struct moon_s moon_coef_t;\n\n')
+
+f.write(f'#define MOON_COEF_47A_LEN ({int(moon_coef_47a.shape[0])})\n')
+f.write(f'#define MOON_COEF_47B_LEN ({int(moon_coef_47b.shape[0])})\n')
+f.write('\n')
+
+# Set A of the moon coefs
+f.write('const moon_coef_t moon_coef_47a[] = {\n')
+for index, row in moon_coef_47a.iterrows():
+    f.write(f'\t[{index}].D = {row.D}, [{index}].M = {row.M}, [{index}].Md = {row.Md}, [{index}].F = {row.F}, [{index}].A = {row.A}, [{index}].B = {row.B},\n')
+f.write('};')
+
+f.write('\n\n')
+
+# Set B of the moon coefs
+f.write('const moon_coef_t moon_coef_47b[] = {\n')
+for index, row in moon_coef_47b.iterrows():
+    f.write(f'\t[{index}].D = {row.D}, [{index}].M = {row.M}, [{index}].Md = {row.Md}, [{index}].F = {row.F}, [{index}].A = {row.A},\n')
+f.write('};\n\n')
+
+f.write('#endif\n')
+
+f.close()

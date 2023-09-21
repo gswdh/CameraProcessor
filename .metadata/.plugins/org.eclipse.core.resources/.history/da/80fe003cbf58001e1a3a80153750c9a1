@@ -1,0 +1,13 @@
+#ifndef __LST__
+#define __LST__
+
+#include <time.h>
+#include <math.h>
+
+#include "aamaths.h"
+
+double lst_julian_day(struct tm dt);
+double lst_day_number_2k(struct tm dt);
+double lst_local_sidereal_time(struct tm dt, double timezone, double longitude);
+
+#endif

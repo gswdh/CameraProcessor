@@ -1,0 +1,31 @@
+import numpy as np
+
+import lst as lst
+import aamaths as aam
+
+def equatorial_coords(dt):
+    days = lst.day_number_2k(dt)
+    t = days / 36525
+
+    L1 = aam.deg_wrap_360(280.466 + 36000.8 * t)
+    M1 = aam.deg_wrap_360((357.529+35999*t) - (0.0001536* t*t) + (t*t*t/24490000))
+
+    C1 = (1.915 - (0.004817* t) - (0.000014* t * t)) * np.sin(np.deg2rad(M1))
+    C1 = C1 + (0.01999 - (0.000101 * t))* np.sin(np.deg2rad(2*M1))
+    C1 = C1 + 0.00029 * np.sin(np.deg2rad(3*M1))
+    V1 = M1 + C1
+    Ec1 = 0.01671 - (0.00004204 * t) - (0.0000001236 * t*t)
+    R1 = 0.99972 / (1 + Ec1 * np.cos(np.deg2rad(2*V1)))
+    Th1 = L1 + C1
+    Om1 = aam.deg_wrap_360(125.04 - (1934.1 * t))
+    Lam1 = Th1 - 0.00569 - 0.00478 * np.sin(np.deg2rad(Om1))
+    Obl = (84381.448 - (46.815 * t))/3600
+
+    Ra1 = np.rad2deg(np.arctan2(np.sin(np.deg2rad(Th1)) * np.cos(np.deg2rad(Obl)), np.cos(np.deg2rad(Th1))))
+    Dec1 = np.rad2deg(np.arcsin(np.sin(np.deg2rad(Obl)) * np.sin(np.deg2rad(Th1))))
+
+    return aam.deg_wrap_360(360 + Ra1), Dec1
+
+def ecliptical_coords(dt):
+	a, d = equatorial_coords(dt)
+	return aam.equatorial2ecliptical(a, d)

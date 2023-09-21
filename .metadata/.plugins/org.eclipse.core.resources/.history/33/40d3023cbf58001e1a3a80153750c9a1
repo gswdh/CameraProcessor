@@ -1,0 +1,222 @@
+#include <stdio.h>
+
+#include <float.h>
+#include <math.h>
+#include <stdbool.h>
+
+#ifdef TEST_AAMATHS
+#include "aamaths.h"
+#endif
+
+#ifdef TEST_SUN
+#include "sun.h"
+#include "aamaths.h"
+#include "lst.h"
+#include <time.h>
+#endif
+
+#ifdef TEST_LST
+#include "lst.h"
+#include "aamaths.h"
+#include <time.h>
+#endif
+
+#ifdef TEST_MOON
+#include "lst.h"
+#include "aamaths.h"
+#include "sun.h"
+#include "moon.h"
+#include <time.h>
+#endif
+
+double min(double a, double b)
+{
+    if (fabs(a) < fabs(b)) return a;
+
+    return b;
+}
+
+bool nearly_equal(double a, double b, double epsilon)
+{
+    double absA = fabs(a);
+    double absB = fabs(b);
+    double diff = fabs(a - b);
+
+    // Shortcut, handles infinities
+    if (a == b) return true;
+
+    // a or b is zero or both are extremely close to it
+    // relative error is less meaningful here
+    else if (a == 0 || b == 0 || (absA + absB < DBL_MIN)) return diff < (epsilon * DBL_MIN);
+
+    // use relative error
+    else return diff / min((absA + absB), DBL_MAX) < epsilon;
+}
+
+int test_aamaths();
+int test_sun();
+int test_moon();
+
+int main(void)
+{
+#ifdef TEST_AAMATHS
+    return test_aamaths();
+
+#endif
+
+#ifdef TEST_SUN
+    return test_sun();
+
+#endif
+
+#ifdef TEST_MOON
+    return test_moon();
+
+#endif
+
+    return 0;
+}
+
+int test_aamaths()
+{
+#ifdef TEST_AAMATHS
+
+    printf("TEST_AAMATHS BEGIN aam_ecliptical2equatorial\n");
+
+    ecliptical_t input1 = { 0 };
+    input1.beta = 100;     // Latitude
+    input1.lambda = 20;     // Longitude
+    equatorial_t output1 = aam_ecliptical2equatorial(input1);
+
+    printf("TEST_AAMATHS (RA)  output.alpha = %f\n", output1.alpha);
+    printf("TEST_AAMATHS (DEC) output.delta = %f\n", output1.delta);
+
+    // Test
+    if (!nearly_equal(output1.alpha, 69.913400, 1e-6))
+    {
+        printf("TEST_AAMATHS alpha test failed\n");
+        return -1;
+    }
+
+    if (!nearly_equal(output1.delta, 61.632709, 1e-6))
+    {
+        printf("TEST_AAMATHS delta test failed\n");
+        return -1;
+    }
+
+    printf("TEST_AAMATHS END SUCCESS\n");
+
+    printf("TEST_AAMATHS BEGIN aam_equatorial2ecliptical\n");
+
+    equatorial_t input2 = { 0 };
+    input2.alpha = 100;     // RA
+    input2.delta = 20;     // Declination
+    ecliptical_t output2 = aam_equatorial2ecliptical(input2);
+
+    printf("TEST_AAMATHS (RA)  output.beta = %f\n", output2.beta);
+    printf("TEST_AAMATHS (DEC) output.lambda = %f\n", output2.lambda);
+
+    // Test
+    if (!nearly_equal(output2.beta, -3.113272, 1e-6))
+    {
+        printf("TEST_AAMATHS beta test failed\n");
+        return -1;
+    }
+
+    if (!nearly_equal(output2.lambda, 99.405293, 1e-6))
+    {
+        printf("TEST_AAMATHS alpha test failed\n");
+        return -1;
+    }
+
+    printf("TEST_AAMATHS END SUCCESS\n");
+#endif /* ifdef TEST_AAMATHS */
+    return 0;
+}
+
+int test_sun()
+{
+#ifdef TEST_SUN
+    struct tm timeinfo = { 0 };
+
+    timeinfo.tm_hour = 11;
+    timeinfo.tm_min = 17;
+    timeinfo.tm_mday = 9;
+    timeinfo.tm_mon = 11; // December
+    timeinfo.tm_year = 2022 - 1900;
+
+    equatorial_t equatorial = sun_equatorial_coords(timeinfo);
+
+    printf("TEST_SUN BEGIN sun_equatorial_coords\n");
+
+    printf("TEST_SUN (RA)  equatorial.alpha = %f\n", equatorial.alpha);
+    printf("TEST_SUN (DEC) equatorial.delta = %f\n", equatorial.delta);
+
+    // Test
+    if (!nearly_equal(equatorial.alpha, 253.274361, 1e-1))
+    {
+        printf("TEST_SUN alpha test failed\n");
+        return -1;
+    }
+
+    if (!nearly_equal(equatorial.delta, -22.547545, 1e-1))
+    {
+        printf("TEST_SUN delta test failed\n");
+        return -1;
+    }
+
+    printf("TEST_SUN END SUCCESS\n");
+#endif /* ifdef TEST_SUN */
+    return 0;
+}
+
+int test_moon()
+{
+#ifdef TEST_MOON
+
+    struct tm timeinfo = { 0 };
+
+    timeinfo.tm_hour = 16;
+    timeinfo.tm_min = 25;
+    timeinfo.tm_mday = 15;
+    timeinfo.tm_mon = 1; // (feb = 2 (tm_mon = (month - 1)))
+    timeinfo.tm_year = 2023 - 1900;
+
+    double longitude = -9;
+    double latitude = 34;
+    double timezone = 0;
+
+    ecliptical_t sun_ec = sun_ecliptical_coords(timeinfo);
+    ecliptical_t moon_ec = moon_ecliptical_coords(timeinfo);
+
+    double moon_bl_lit_p = moon_illuminated_fraction(moon_ec, sun_ec);
+
+    equatorial_t sun_eq = sun_equatorial_coords(timeinfo);
+    equatorial_t moon_eq = moon_equatorial_coords(timeinfo);
+
+    printf("\n");
+    printf("Geocentric Ecliptical Coordinates\n");
+    printf("Moon's latitude %f (moon_beta)\n", moon_ec.beta);
+    printf("Moon's longitude %f (moon_lambda)\n", moon_ec.lambda);
+    printf("Sun's latitude %f (sun_beta)\n", sun_ec.beta);
+    printf("Sun's longitude %f (sun_lambda)\n", sun_ec.lambda);
+    printf("\n");
+
+    printf("Geocentric Equatorial Coordinates\n");
+    printf("Moon's RA %f (moon_alpha)\n", moon_eq.alpha);
+    printf("Moon's declination %f (moon_delta)\n", moon_eq.delta);
+    printf("Sun's RA %f (sun_alpha)\n", sun_eq.alpha);
+    printf("Sun's declination %f (sun_delta)\n", sun_eq.delta);
+    printf("\n");
+
+    double bl_angle = moon_bright_limb_angle(sun_eq, moon_eq, timeinfo, timezone, longitude, latitude);
+
+    printf("TEST_MOON moon_bl_lit_p = %f%%\n", moon_bl_lit_p * 100);
+    printf("TEST_MOON bl_angle = %f°\n", bl_angle);
+
+    printf("TEST_MOON END SUCCESS\n");
+
+    return 0;
+
+#endif /* ifdef TEST_MOON */
+}

@@ -1,0 +1,200 @@
+#include "moon.h"
+
+#include "lst.h"
+
+#include "coefs.h"
+
+const double moon_crescent_data[15][3] = {{50, 1000, 500}, {45, 6, 2.949}, {40, 3, 1.396}, {35, 2.05, 0.865}, {30, 1.65, 0.615}, {25, 1.425, 0.453}, {20, 1.29, 0.337}, {15, 1.209, 0.251}, {10, 1.156, 0.178}, {5, 1.125, 0.118}, {4, 1.1206, 0.10694}, {3, 1.1165, 0.095619}, {2, 1.1126, 0.083485}, {1, 1.1091, 0.070892}, {0, 1.105, 0.052}};
+
+#define PERCENTAGE 0
+#define DIAMETER 1
+#define DISTANCE 2
+
+static double Ld_deg(double t)
+{
+    return aam_deg_wrap_360(218.3164477 + 481267.88123421 * t - 0.0015786 * pow(t, 2) + pow(t, 3) / 538841 - pow(t, 4) / 65194000);
+}
+
+static double D_deg(double t)
+{
+    return aam_deg_wrap_360(297.8501921 + 445267.1114034 * t - 0.0018819 * pow(t, 2) + pow(t, 3) / 545868 - pow(t, 4) / 113065000);
+}
+
+static double Md_deg(double t)
+{
+    return aam_deg_wrap_360(134.9633964 + 477198.8675055 * t + 0.0087414 * pow(t, 2) + pow(t, 3) / 69699 - pow(t, 4) / 14712000);
+}
+
+static double F_deg(double t)
+{
+    return aam_deg_wrap_360(93.2720950 + 483202.0175233 * t - 0.0036539 * pow(t, 2) - pow(t, 3) / 3526000 + pow(t, 4) / 863310000);
+}
+
+static double M_deg(double t)
+{
+    return aam_deg_wrap_360(357.5291092 + 35999.0502909 * t - 0.0001536 * pow(t, 2) + pow(t, 3) / 24490000);
+}
+
+static double moon_E(double t)
+{
+    return 1 - 0.002516 * t - 0.0000074 * pow(t, 2);
+}
+
+static double abs_bright_limb_angle(equatorial_t sun, equatorial_t moon)
+{
+    double X = sin(DEG2RAD(sun.delta)) * cos(DEG2RAD(moon.delta)) - cos(DEG2RAD(sun.delta)) * sin(DEG2RAD(moon.delta)) * cos(DEG2RAD(sun.alpha) - DEG2RAD(moon.alpha));
+    double Y = cos(DEG2RAD(sun.delta)) * sin(DEG2RAD(sun.alpha) - DEG2RAD(moon.alpha));
+
+    return aam_deg_wrap_360(RAD2DEG(atan2(Y, X)));
+}
+
+static double zenith_angle_offset(struct tm dt, double timezone, double longitude, double latitude, equatorial_t moon)
+{
+    double lst = lst_local_sidereal_time(dt, timezone, longitude);
+    double moon_hour_angle = aam_deg_wrap_360(lst - moon.alpha);
+
+    return RAD2DEG(atan((sin(DEG2RAD(moon_hour_angle))) / ((tan(DEG2RAD(latitude)) * cos(DEG2RAD(moon.delta))) - (sin(DEG2RAD(moon.delta)) * cos(DEG2RAD(moon_hour_angle))))));
+}
+
+double moon_illuminated_fraction(ecliptical_t moon, ecliptical_t sun)
+{
+    // Get the elongation
+    double A = cos(DEG2RAD(moon.beta)) * cos(DEG2RAD(moon.lambda) - DEG2RAD(sun.lambda));
+    double psi = 90 - RAD2DEG(atan(A / sqrt(1 - A * A)));
+
+    // Phase angle
+    double X = 152.04e9 * sin(DEG2RAD(psi));
+    double Y = 384.4e6 - (152.04e9 * A);
+    double Il = atan2(X, Y);
+
+    // Illuminated fraction
+    return (1 + cos(Il)) / 2;
+}
+
+ecliptical_t moon_ecliptical_coords(struct tm dt)
+{
+    double jd = lst_julian_day(dt);
+
+    double t = (jd - 2451545) / 36525;
+
+    double Ld = DEG2RAD(Ld_deg(t));
+    double D = DEG2RAD(D_deg(t));
+    double Md = DEG2RAD(Md_deg(t));
+    double F = DEG2RAD(F_deg(t));
+    double M = DEG2RAD(M_deg(t));
+
+    double E = moon_E(t);
+
+    double A1 = DEG2RAD(aam_deg_wrap_360(119.75 + 131.849 * t));
+    double A2 = DEG2RAD(aam_deg_wrap_360(53.09 + 479264.290 * t));
+    double A3 = DEG2RAD(aam_deg_wrap_360(313.45 + 481266.484 * t));
+
+    ecliptical_t result = {0};
+
+    // Calculate the lambda
+    double sigma_l = 0;
+
+    for (int i = 0; i < MOON_COEF_47A_LEN; i++)
+    {
+        moon_coef_t row = moon_coef_47a[i];
+        double sigma_this = row.A * sin((row.D * D) + (row.M * M) + (row.Md * Md) + (row.F * F));
+
+        if (row.M == 1 || row.M == -1)
+            sigma_this *= E;
+        else if (row.M == 2 || row.M == -2)
+            sigma_this *= (E * E);
+
+        sigma_l += sigma_this;
+    }
+
+    sigma_l = sigma_l + (3958 * sin(A1)) + (1962 * sin(Ld - F)) + (318 * sin(A2));
+    result.lambda = Ld_deg(t) + (sigma_l / 1e6);
+
+    // Calculate the beta
+    double sigma_b = 0;
+
+    for (int i = 0; i < MOON_COEF_47B_LEN; i++)
+    {
+        moon_coef_t row = moon_coef_47b[i];
+        double sigma_this = row.A * sin((row.D * D) + (row.M * M) + (row.Md * Md) + (row.F * F));
+
+        if (row.M == 1 || row.M == -1)
+            sigma_this *= E;
+        else if (row.M == 2 || row.M == -2)
+            sigma_this *= (E * E);
+
+        sigma_b += sigma_this;
+    }
+
+    sigma_b = sigma_b - (2235 * sin(Ld)) + (382 * sin(A3)) + (175 * sin(A1 - F)) + (175 * sin(A1 + F)) + (127 * sin(Ld - Md)) - (115 * sin(Ld + Md));
+    result.beta = sigma_b / 1e6;
+
+    return result;
+}
+
+equatorial_t moon_equatorial_coords(struct tm dt)
+{
+    return aam_ecliptical2equatorial(moon_ecliptical_coords(dt));
+}
+
+double moon_bright_limb_angle(equatorial_t sun, equatorial_t moon, struct tm dt, double timezone, double longitude, double latitude)
+{
+    double bl_angle_deg = abs_bright_limb_angle(sun, moon);
+    double zenith_angle = zenith_angle_offset(dt, timezone, longitude, latitude, moon);
+
+    if (latitude < 0)
+        zenith_angle += 180;
+
+    return aam_deg_wrap_360(360 - (bl_angle_deg - zenith_angle));
+}
+
+void moon_crescent_dims(double lit_area, double *diameter, double *distance)
+{
+    double xp = lit_area * 100;
+
+    // Limits
+    if (xp >= 50)
+    {
+        *diameter = moon_crescent_data[0][DIAMETER];
+        *distance = moon_crescent_data[0][DISTANCE];
+        return;
+    }
+    if (xp <= 0)
+    {
+        *diameter = moon_crescent_data[14][DIAMETER];
+        *distance = moon_crescent_data[14][DISTANCE];
+        return;
+    }
+
+    // Find the right data points
+    uint32_t point0 = 0;
+    for (uint32_t i = 0; i < 15; i++)
+    {
+        if (moon_crescent_data[14 - i][PERCENTAGE] > xp)
+        {
+            point0 = 14 - i;
+            break;
+        }
+    }
+
+    uint32_t point1 = 0;
+    for (uint32_t i = 0; i < 15; i++)
+    {
+        if (moon_crescent_data[i][PERCENTAGE] <= xp)
+        {
+            point1 = i;
+            break;
+        }
+    }
+
+    // Linear interp between the points
+    double percentage0 = moon_crescent_data[point0][PERCENTAGE];
+    double percentage1 = moon_crescent_data[point1][PERCENTAGE];
+    double diameter0 = moon_crescent_data[point0][DIAMETER];
+    double diameter1 = moon_crescent_data[point1][DIAMETER];
+    double distance0 = moon_crescent_data[point0][DISTANCE];
+    double distance1 = moon_crescent_data[point1][DISTANCE];
+
+    *diameter = aam_linear_interp(percentage0, percentage1, diameter0, diameter1, xp);
+    *distance = aam_linear_interp(percentage0, percentage1, distance0, distance1, xp);
+}

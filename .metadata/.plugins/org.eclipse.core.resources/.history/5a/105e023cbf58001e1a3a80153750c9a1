@@ -1,0 +1,11 @@
+#ifndef __SUN__
+#define __SUN__
+
+#include <time.h>
+
+#include "aamaths.h"
+
+equatorial_t sun_equatorial_coords(struct tm dt);
+ecliptical_t sun_ecliptical_coords(struct tm dt);
+
+#endif

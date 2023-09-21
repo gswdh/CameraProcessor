@@ -20,3 +20,7 @@ domain active {zynq_fsbl}
 domain active {freertos10_xilinx_ps7_cortexa9_0}
 platform generate -quick
 platform generate
+bsp reload
+platform generate -domains 
+bsp reload
+platform generate -domains 
