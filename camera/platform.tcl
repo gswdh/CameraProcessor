@@ -24,3 +24,9 @@ bsp reload
 platform generate -domains 
 bsp reload
 platform generate -domains 
+platform generate
+platform active {camera}
+bsp reload
+platform generate -domains 
+platform clean
+platform generate

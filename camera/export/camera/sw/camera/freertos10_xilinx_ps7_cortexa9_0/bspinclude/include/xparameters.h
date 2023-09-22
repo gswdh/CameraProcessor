@@ -179,7 +179,7 @@
 
 /******************************************************************/
 
-/* Definitions for driver PS */
+/* Definitions for driver GPIOPS */
 #define XPAR_XGPIOPS_NUM_INSTANCES 1
 
 /* Definitions for peripheral PS7_GPIO_0 */

@@ -7,50 +7,40 @@
 #include "timers.h"
 
 // Xilinx includes
-#include "xil_printf.h"
 #include "xparameters.h"
 
 // Peripheral includes
 #include "gpio.h"
+#include "spi.h"
 
 // Abstraction includes
+#include "gui.h"
+#include "logging.h"
+
+#define LOG_TAG ("MAIN")
+
+void main_task(void * params)
+{
+	log_info(LOG_TAG, "Starting system.");
+
+	// Perph inits (must be done before abstraction)
+	gpio_init();
+	spi_init();
+
+	// Abstraction starts
+	gui_start();
+
+	vTaskDelete(NULL);	
+}
 
 int main(void)
 {
-	gpio_init();
-
-	xil_printf("Hello from Freertos example main\n");
-
-	volatile int start = 0;
-
-	if (start == 1)
-	{
-		// Make sure the sensor starts in reset
-		gpio_set(SEN_SYS_NRESET_PIN, false);
-
-		// VDDIO is already on
-
-		// 1V3 reg
-		gpio_set(PWR_SEN_1V3_EN_PIN, true);
-
-		// 3V3A reg
-		gpio_set(PWR_SEN_3V3A_EN_PIN, true);
-
-		// Array suppply etc.
-		gpio_set(PWR_SEN_3V6_EN_PIN, true);
-		gpio_set(PWR_SEN_1V3_EN_PIN, true);
-		gpio_set(PWR_SEN_0V7_EN_PIN, true);
-		gpio_set(PWR_SEN_4V1_EN_PIN, true);
-		gpio_set(PWR_SEN_N1V3A_EN_PIN, true);
-
-		// Out of reset
-		gpio_set(SEN_SYS_NRESET_PIN, true);
-	}
+	TaskHandle_t main_task_handle = {0};
+	xTaskCreate(main_task, "MAIN", 1024, NULL, tskIDLE_PRIORITY, &main_task_handle);
 
 	vTaskStartScheduler();
-
-	for (;;)
-		;
+	
+	return 0;
 }
 
 

@@ -1,0 +1,41 @@
+// System includes
+
+// FreeRTOS includes
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+
+// Xilinx includes
+#include "xil_printf.h"
+#include "xparameters.h"
+
+// Peripheral includes
+#include "gpio.h"
+
+// Abstraction includes
+
+int main(void)
+{
+	// Perph inits
+	gpio_init();
+
+	// Device inits
+
+
+
+	vTaskStartScheduler();
+
+	while(1)
+	{
+
+	}
+
+	return 0;
+}
+
+
+
+
+
+

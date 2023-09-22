@@ -1,25 +1,25 @@
-22:57:34 **** Incremental Build of configuration Debug for project pss ****
+22:55:05 **** Incremental Build of configuration Debug for project pss ****
 make all 
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory main-build
-'Building file: ../src/gpio.c'
+'Building file: ../src/logging.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
-'Finished building: ../src/gpio.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -c -fmessage-length=0 -MT"src/logging.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/logging.d" -MT"src/logging.o" -o "src/logging.o" "../src/logging.c"
+'Finished building: ../src/logging.c'
 ' '
 'Building target: pss.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "pss.elf"  ./src/gpio.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "pss.elf"  ./src/gpio.o ./src/gui.o ./src/logging.o ./src/main.o ./src/spi.o ./src/sys.o  ./gsembedlib/ssd1309z/ssd1309z.o  ./gsembedlib/log/log.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
 'Finished building target: pss.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size pss.elf  |tee "pss.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  77012	   3344	  88768	 169124	  294a4	pss.elf
+  84064	   3408	  97008	 184480	  2d0a0	pss.elf
 'Finished building: pss.elf.size'
 ' '
 
-22:57:35 Build Finished (took 1s.97ms)
+22:55:06 Build Finished (took 1s.178ms)
 

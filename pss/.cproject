@@ -51,17 +51,19 @@
                                 								
                                 <option id="xilinx.gnu.compiler.option.debugging.level.163919378" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
                                 								
-                                <option id="xilinx.gnu.compiler.inferred.swplatform.includes.1390283521" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="${resolvePlatformFile:project=pss,fileType=bspInclude}"/>
-                                    								
-                                </option>
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.includes.1390283521" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath"/>
                                 								
                                 <option id="xilinx.gnu.compiler.misc.other.564034183" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
                                 								
-                                <option id="xilinx.gnu.compiler.dircategory.includes.737797380" superClass="xilinx.gnu.compiler.dircategory.includes" useByScannerDiscovery="false" valueType="includePath">
+                                <option id="xilinx.gnu.compiler.dircategory.includes.737797380" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="${resolvePlatformFile:project=pss,fileType=bspInclude}"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/pss/gsembedlib/ssd1309z}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/pss/gsembedlib/log}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -141,7 +143,11 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="_ide" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="gsembedlib/log"/>
+                        						
+                        <entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="gsembedlib/ssd1309z"/>
+                        						
+                        <entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
                     				
@@ -354,5 +360,7 @@
         </configuration>
         	
     </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
     
 </cproject>
