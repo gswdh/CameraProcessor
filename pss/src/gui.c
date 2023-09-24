@@ -14,7 +14,7 @@
 
 #define SSD_SPI_CS_PIN (SPI_DEV_CS_1)
 
-uint8_t gui_disp_buffer[GUI_DISP_BUFF_LEN] = {0};
+uint8_t gui_disp_buffer[SSD_DISP_BUFFER_LEN] = {0};
 
 TaskHandle_t gui_task_handle = {0};
 
@@ -67,7 +67,7 @@ void gui_task(void * params)
 		{
 			tick = sys_tick_ms();
 
-			ssd_write_data(gui_disp_buffer, GUI_DISP_BUFF_LEN);
+			ssd_update_display(gui_disp_buffer);
 		}
 	}
 }

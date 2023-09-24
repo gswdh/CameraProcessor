@@ -3,13 +3,22 @@
 // Xilinx
 #include "xparameters.h"
 #include "xgpiops.h"
+#include "xgpio.h"
 #include "xil_printf.h"
 
 // FreeRTOS
 #include "FreeRTOS.h"
 #include "task.h"
 
-XGpioPs gpio_dev = {0};
+// Abstractions
+#include "logging.h"
+
+#define LOG_TAG "GPIO"
+
+#define GPIO_FPGA_PORT_CHANNEL (0x01)
+
+XGpioPs gpio_ps = {0};
+XGpio gpio_pl = {0};
 
 TaskHandle_t gpio_task_handle = {0};
 
@@ -32,28 +41,35 @@ PWR_SEN_0V7_EN_PIN};
 
 void gpio_init()
 {
+	// PS based GPIO
 	XGpioPs_Config *gpio_config = XGpioPs_LookupConfig(XPAR_XGPIOPS_0_DEVICE_ID);
-	XGpioPs_CfgInitialize(&gpio_dev, gpio_config, gpio_config->BaseAddr);
+	XGpioPs_CfgInitialize(&gpio_ps, gpio_config, gpio_config->BaseAddr);
 
 	// Inputs
-	XGpioPs_SetDirectionPin(&gpio_dev, BTN_TOPLEFT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, BTN_BTMRIGHT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, TMP_ALERT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, BTN_BTMLEFT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, TMP_THERM_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, BTN_THUMB_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, SEN_TDIG0_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, SEN_TDIG1_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, BTN_TOPRIGHT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_dev, PMC_PSS_FLAG_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, BTN_TOPLEFT_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, BTN_BTMRIGHT_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, TMP_ALERT_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, BTN_BTMLEFT_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, TMP_THERM_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, BTN_THUMB_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, SEN_TDIG0_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, SEN_TDIG1_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, BTN_TOPRIGHT_PIN, GPIO_DIR_INPUT);
+	XGpioPs_SetDirectionPin(&gpio_ps, PMC_PSS_FLAG_PIN, GPIO_DIR_INPUT);
 
 	// Outputs
 	for(uint32_t i = 0; i < sizeof(gpio_outputs); i++)
 	{
-		XGpioPs_SetDirectionPin(&gpio_dev, gpio_outputs[i], GPIO_DIR_OUTPUT);
+		XGpioPs_SetDirectionPin(&gpio_ps, gpio_outputs[i], GPIO_DIR_OUTPUT);
 		gpio_set(gpio_outputs[i], false);
-		XGpioPs_SetOutputEnablePin(&gpio_dev, gpio_outputs[i], GPIO_OUTPUT_EN);		
+		XGpioPs_SetOutputEnablePin(&gpio_ps, gpio_outputs[i], GPIO_OUTPUT_EN);		
 	}
+
+	// FPGA based GPIO
+	XGpio_Initialize(&gpio_pl, XPAR_GPIO_0_DEVICE_ID);
+
+	// All as outputs
+	XGpio_SetDataDirection(&gpio_pl, GPIO_FPGA_PORT_CHANNEL, 0x00000000);
 
 	// Look for state changes
 	xTaskCreate(gpio_task, "GPIO Polling", 1024, NULL, tskIDLE_PRIORITY, &gpio_task_handle);
@@ -61,12 +77,25 @@ void gpio_init()
 
 bool gpio_get(gpio_pins_t pin)
 {
-	return XGpioPs_ReadPin(&gpio_dev, (uint32_t)pin);
+	return XGpioPs_ReadPin(&gpio_ps, (uint32_t)pin);
 }
 
 void gpio_set(gpio_pins_t pin, bool state)
 {
-	XGpioPs_WritePin(&gpio_dev, (uint32_t)pin, (uint32_t)state);
+	XGpioPs_WritePin(&gpio_ps, (uint32_t)pin, (uint32_t)state);
+}
+
+bool gpio_pl_get(uint32_t pin_mask)
+{
+	return false;
+}
+
+void gpio_pl_set(uint32_t pin_mask, bool state)
+{
+	if(state)
+		XGpio_DiscreteWrite(&gpio_pl, GPIO_FPGA_PORT_CHANNEL, pin_mask);
+	else
+		XGpio_DiscreteClear(&gpio_pl, GPIO_FPGA_PORT_CHANNEL, pin_mask);
 }
 
 void gpio_task(void *params)
@@ -79,7 +108,7 @@ void gpio_task(void *params)
 		{
 			tick = xTaskGetTickCount();
 
-			//xil_printf("TL = %u, BR = %u\n", gpio_get(BTN_TOPLEFT_PIN), gpio_get(BTN_BTMRIGHT_PIN));
+			log_info(LOG_TAG, "TL = %u, BR = %u\n", gpio_get(BTN_TOPLEFT_PIN), gpio_get(BTN_BTMRIGHT_PIN));
 		}
 	}
 }

@@ -30,3 +30,10 @@ bsp reload
 platform generate -domains 
 platform clean
 platform generate
+platform active {camera}
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform generate -domains 

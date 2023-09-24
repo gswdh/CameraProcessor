@@ -179,6 +179,29 @@
 
 /******************************************************************/
 
+/* Definitions for driver GPIO */
+#define XPAR_XGPIO_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_GPIO_0 */
+#define XPAR_AXI_GPIO_0_BASEADDR 0x41200000
+#define XPAR_AXI_GPIO_0_HIGHADDR 0x4120FFFF
+#define XPAR_AXI_GPIO_0_DEVICE_ID 0
+#define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_0_IS_DUAL 0
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_GPIO_0 */
+#define XPAR_GPIO_0_BASEADDR 0x41200000
+#define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_0_IS_DUAL 0
+
+
+/******************************************************************/
+
 /* Definitions for driver GPIOPS */
 #define XPAR_XGPIOPS_NUM_INSTANCES 1
 
@@ -344,7 +367,7 @@
 #define XPAR_PS7_SPI_0_DEVICE_ID 0
 #define XPAR_PS7_SPI_0_BASEADDR 0xE0006000
 #define XPAR_PS7_SPI_0_HIGHADDR 0xE0006FFF
-#define XPAR_PS7_SPI_0_SPI_CLK_FREQ_HZ 166666672
+#define XPAR_PS7_SPI_0_SPI_CLK_FREQ_HZ 160000000
 
 
 /******************************************************************/
@@ -353,7 +376,7 @@
 #define XPAR_XSPIPS_0_DEVICE_ID XPAR_PS7_SPI_0_DEVICE_ID
 #define XPAR_XSPIPS_0_BASEADDR 0xE0006000
 #define XPAR_XSPIPS_0_HIGHADDR 0xE0006FFF
-#define XPAR_XSPIPS_0_SPI_CLK_FREQ_HZ 166666672
+#define XPAR_XSPIPS_0_SPI_CLK_FREQ_HZ 160000000
 
 
 /******************************************************************/

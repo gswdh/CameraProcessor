@@ -21,7 +21,7 @@
 
 void main_task(void * params)
 {
-	log_info(LOG_TAG, "Starting system.");
+	log_info(LOG_TAG, "Starting system.\n");
 
 	// Perph inits (must be done before abstraction)
 	gpio_init();

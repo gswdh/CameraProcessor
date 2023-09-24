@@ -5554,3 +5554,1339 @@ TRACE::2023-09-22.22:36:03::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/
 C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2023-09-22.22:36:03::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:13:51::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:13:51::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:13:51::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:13:54::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:13:54::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:13:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:13:54::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened new HwDB with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWReader::Active system found as  camera
+TRACE::2023-09-24.13:14:00::SCWReader::Handling sysconfig camera
+TRACE::2023-09-24.13:14:00::SCWDomain::checking for install qemu data   : 
+TRACE::2023-09-24.13:14:00::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2023-09-24.13:14:00::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-09-24.13:14:00::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2023-09-24.13:14:00::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:14:00::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:00::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:00::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2023-09-24.13:14:00::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:14:00::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:14:00::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:00::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2023-09-24.13:14:00::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:00::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWReader::No isolation master present  
+TRACE::2023-09-24.13:14:00::SCWDomain::checking for install qemu data   : 
+TRACE::2023-09-24.13:14:00::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2023-09-24.13:14:00::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:00::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2023-09-24.13:14:00::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:14:00::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:14:00::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:14:00::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:00::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2023-09-24.13:14:00::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:00::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:00::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:00::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:00::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:00::SCWReader::No isolation master present  
+TRACE::2023-09-24.13:14:03::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:03::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:03::SCWPlatform:: Platform location is C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa
+TRACE::2023-09-24.13:14:03::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:06::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::update - Opened existing hwdb bd_wrapper_0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWMssOS::Doing hw sync for the mss in domain: freertos10_xilinx_ps7_cortexa9_0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Opened existing hwdb bd_wrapper
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:06::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/tempdsa/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::update - Opened existing hwdb bd_wrapper_0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:06::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:14:06::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:14:06::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:06::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2023-09-24.13:14:06::SCWMssOS::Removing the swdes entry for  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:14:06::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:14:06::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:06::SCWMssOS::Completed hw sync for the mss in domain: freertos10_xilinx_ps7_cortexa9_0
+TRACE::2023-09-24.13:14:06::SCWMssOS::Removing the swdes entry for  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:06::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:06::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-09-24.13:14:08::SCWPlatform::Opened new HwDB with name bd_wrapper_1
+TRACE::2023-09-24.13:14:08::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2023-09-24.13:14:08::SCWMssOS::Writing the mss file completed C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:08::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2023-09-24.13:14:08::SCWMssOS::Writing the mss file completed C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:08::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:08::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:08::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_1
+TRACE::2023-09-24.13:14:08::SCWPlatform::Opened existing hwdb bd_wrapper_1
+TRACE::2023-09-24.13:14:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:08::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:08::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:08::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:08::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:08::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_1
+TRACE::2023-09-24.13:14:08::SCWPlatform::Opened existing hwdb bd_wrapper_1
+TRACE::2023-09-24.13:14:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:08::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:08::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:08::SCWWriter::formatted JSON is {
+	"platformName":	"camera",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"camera",
+	"platHandOff":	"C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa",
+	"platIntHandOff":	"<platformDir>/hw/camera.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"camera",
+	"systems":	[{
+			"systemName":	"camera",
+			"systemDesc":	"camera",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"camera",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"0eb1d9e29255ab9f8614edc83f948c5a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.7",
+					"mssFile":	"",
+					"md5Digest":	"e44b765014657df568a7a79a42faa876",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2023-09-24.13:14:16::SCWPlatform::Started generating the artifacts platform camera
+TRACE::2023-09-24.13:14:16::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-09-24.13:14:16::SCWPlatform::Started generating the artifacts for system configuration camera
+LOG::2023-09-24.13:14:16::SCWSystem::Checking the domain zynq_fsbl
+LOG::2023-09-24.13:14:16::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2023-09-24.13:14:16::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2023-09-24.13:14:16::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2023-09-24.13:14:16::SCWSystem::Checking the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2023-09-24.13:14:16::SCWSystem::Not a boot domain 
+LOG::2023-09-24.13:14:16::SCWSystem::Started Processing the domain freertos10_xilinx_ps7_cortexa9_0
+TRACE::2023-09-24.13:14:16::SCWDomain::Generating domain artifcats
+TRACE::2023-09-24.13:14:16::SCWMssOS::Generating standalone artifcats
+TRACE::2023-09-24.13:14:16::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt To C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/qemu/
+TRACE::2023-09-24.13:14:16::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt To C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_ps7_cortexa9_0/qemu/
+TRACE::2023-09-24.13:14:16::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-09-24.13:14:16::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:16::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:16::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:16::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:16::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:16::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:16::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_1
+TRACE::2023-09-24.13:14:16::SCWPlatform::Opened existing hwdb bd_wrapper_1
+TRACE::2023-09-24.13:14:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:16::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:16::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:16::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:16::SCWMssOS::Completed writing the mss file at C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp
+TRACE::2023-09-24.13:14:16::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:17::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2023-09-24.13:14:27::SCWMssOS::doing bsp build ... 
+TRACE::2023-09-24.13:14:27::SCWMssOS::System Command Ran  C: & cd  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp & make 
+TRACE::2023-09-24.13:14:27::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -j --no-print-directory par_libs
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2023-09-24.13:14:27::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2023-09-24.13:14:27::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_10/src"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+TRACE::2023-09-24.13:14:27::SCWMssOS::abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+TRACE::2023-09-24.13:14:27::SCWMssOS::d -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-09-24.13:14:27::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-09-24.13:14:27::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:27::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:27::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_7/src"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-09-24.13:14:27::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-09-24.13:14:27::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_7/src"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-no
+TRACE::2023-09-24.13:14:27::SCWMssOS::ne-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi
+TRACE::2023-09-24.13:14:27::SCWMssOS::=hard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:27::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_8/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_7/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2023-09-24.13:14:28::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2023-09-24.13:14:28::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_12/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_3/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_8/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/iicps_v3_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"includes"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2023-09-24.13:14:28::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2023-09-24.13:14:28::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_3/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/spips_v3_5/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_10/src"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:28::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:28::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-09-24.13:14:28::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-09-24.13:14:28::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_10/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/spips_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-09-24.13:14:29::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-09-24.13:14:29::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2023-09-24.13:14:29::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2023-09-24.13:14:29::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_5/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2023-09-24.13:14:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2023-09-24.13:14:29::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2023-09-24.13:14:29::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2023-09-24.13:14:29::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_10/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2023-09-24.13:14:29::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2023-09-24.13:14:29::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-09-24.13:14:29::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-09-24.13:14:29::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:29::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:29::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_7/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-09-24.13:14:29::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-09-24.13:14:29::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_7/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_8/src"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-
+TRACE::2023-09-24.13:14:29::SCWMssOS::eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=ha
+TRACE::2023-09-24.13:14:29::SCWMssOS::rd -nostartfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:29::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:29::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_7/src"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2023-09-24.13:14:30::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2023-09-24.13:14:30::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_12/src"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/iicps_v3_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:30::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_8/src"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:30::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_3/src"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:30::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+TRACE::2023-09-24.13:14:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2023-09-24.13:14:30::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2023-09-24.13:14:30::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_3/src"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_10/src"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_5/src"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_10/src"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:32::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:32::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_5/src"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2023-09-24.13:14:32::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2023-09-24.13:14:32::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-09-24.13:14:32::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-09-24.13:14:32::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:32::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2023-09-24.13:14:32::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2023-09-24.13:14:32::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:33::SCWMssOS::make -C ps7_cortexa9_0/libsrc/spips_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2023-09-24.13:14:33::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2023-09-24.13:14:33::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2023-09-24.13:14:39::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2023-09-24.13:14:39::SCWMssOS::make --no-print-directory archive
+
+TRACE::2023-09-24.13:14:39::SCWMssOS::arm-none-eabi-ar -r  ps7_cortexa9_0/lib/libxil.a ps7_cortexa9_0/lib/xadcps_selftest.o ps7_cortexa9_0/lib/xplatform_info.o ps7_c
+TRACE::2023-09-24.13:14:39::SCWMssOS::ortexa9_0/lib/xil_mem.o ps7_cortexa9_0/lib/xspips_sinit.o ps7_cortexa9_0/lib/_exit.o ps7_cortexa9_0/lib/isatty.o ps7_cortexa9_0
+TRACE::2023-09-24.13:14:39::SCWMssOS::/lib/xspips_selftest.o ps7_cortexa9_0/lib/xdevcfg_hw.o ps7_cortexa9_0/lib/xil_sleeptimer.o ps7_cortexa9_0/lib/xqspips_options.o
+TRACE::2023-09-24.13:14:39::SCWMssOS:: ps7_cortexa9_0/lib/xdmaps_g.o ps7_cortexa9_0/lib/xscutimer_g.o ps7_cortexa9_0/lib/xsdps_options.o ps7_cortexa9_0/lib/xil_misc_
+TRACE::2023-09-24.13:14:39::SCWMssOS::psreset_api.o ps7_cortexa9_0/lib/xdmaps_sinit.o ps7_cortexa9_0/lib/xscutimer_sinit.o ps7_cortexa9_0/lib/inbyte.o ps7_cortexa9_0
+TRACE::2023-09-24.13:14:39::SCWMssOS::/lib/xdmaps_selftest.o ps7_cortexa9_0/lib/xscutimer_selftest.o ps7_cortexa9_0/lib/putnum.o ps7_cortexa9_0/lib/xqspips_hw.o ps7_
+TRACE::2023-09-24.13:14:39::SCWMssOS::cortexa9_0/lib/xgpiops_g.o ps7_cortexa9_0/lib/xsdps.o ps7_cortexa9_0/lib/close.o ps7_cortexa9_0/lib/xiicps_intr.o ps7_cortexa9_
+TRACE::2023-09-24.13:14:39::SCWMssOS::0/lib/xgpiops_sinit.o ps7_cortexa9_0/lib/xgpiops_selftest.o ps7_cortexa9_0/lib/xgpio_g.o ps7_cortexa9_0/lib/xscuwdt.o ps7_corte
+TRACE::2023-09-24.13:14:39::SCWMssOS::xa9_0/lib/xil_clocking.o ps7_cortexa9_0/lib/xgpio_sinit.o ps7_cortexa9_0/lib/xuartps_sinit.o ps7_cortexa9_0/lib/xgpio_selftest.
+TRACE::2023-09-24.13:14:39::SCWMssOS::o ps7_cortexa9_0/lib/xiicps_slave.o ps7_cortexa9_0/lib/xil_printf.o ps7_cortexa9_0/lib/kill.o ps7_cortexa9_0/lib/xadcps.o ps7_c
+TRACE::2023-09-24.13:14:39::SCWMssOS::ortexa9_0/lib/xiicps_options.o ps7_cortexa9_0/lib/xuartps_selftest.o ps7_cortexa9_0/lib/xuartps_g.o ps7_cortexa9_0/lib/outbyte.
+TRACE::2023-09-24.13:14:39::SCWMssOS::o ps7_cortexa9_0/lib/lseek.o ps7_cortexa9_0/lib/xspips.o ps7_cortexa9_0/lib/xl2cc_counter.o ps7_cortexa9_0/lib/xiicps_hw.o ps7_
+TRACE::2023-09-24.13:14:39::SCWMssOS::cortexa9_0/lib/abort.o ps7_cortexa9_0/lib/xscugic_intr.o ps7_cortexa9_0/lib/getpid.o ps7_cortexa9_0/lib/xil_testcache.o ps7_cor
+TRACE::2023-09-24.13:14:39::SCWMssOS::texa9_0/lib/xdevcfg_sinit.o ps7_cortexa9_0/lib/xdmaps.o ps7_cortexa9_0/lib/xscutimer.o ps7_cortexa9_0/lib/xdevcfg_selftest.o ps
+TRACE::2023-09-24.13:14:39::SCWMssOS::7_cortexa9_0/lib/xpm_counter.o ps7_cortexa9_0/lib/xiicps.o ps7_cortexa9_0/lib/_sbrk.o ps7_cortexa9_0/lib/xiicps_master.o ps7_co
+TRACE::2023-09-24.13:14:39::SCWMssOS::rtexa9_0/lib/xqspips_g.o ps7_cortexa9_0/lib/xgpiops.o ps7_cortexa9_0/lib/xsdps_g.o ps7_cortexa9_0/lib/xsdps_sinit.o ps7_cortexa
+TRACE::2023-09-24.13:14:39::SCWMssOS::9_0/lib/xqspips_selftest.o ps7_cortexa9_0/lib/xil_exception.o ps7_cortexa9_0/lib/sbrk.o ps7_cortexa9_0/lib/xil_testmem.o ps7_co
+TRACE::2023-09-24.13:14:39::SCWMssOS::rtexa9_0/lib/xdevcfg.o ps7_cortexa9_0/lib/open.o ps7_cortexa9_0/lib/xil_assert.o ps7_cortexa9_0/lib/xsdps_host.o ps7_cortexa9_0
+TRACE::2023-09-24.13:14:39::SCWMssOS::/lib/xcoresightpsdcc.o ps7_cortexa9_0/lib/xiicps_xfer.o ps7_cortexa9_0/lib/xscugic_hw.o ps7_cortexa9_0/lib/xuartps.o ps7_cortex
+TRACE::2023-09-24.13:14:39::SCWMssOS::a9_0/lib/sleep.o ps7_cortexa9_0/lib/cpputest_time.o ps7_cortexa9_0/lib/_open.o ps7_cortexa9_0/lib/fcntl.o ps7_cortexa9_0/lib/pr
+TRACE::2023-09-24.13:14:39::SCWMssOS::int.o ps7_cortexa9_0/lib/read.o ps7_cortexa9_0/lib/xiicps_g.o ps7_cortexa9_0/lib/xadcps_intr.o ps7_cortexa9_0/lib/xqspips.o ps7
+TRACE::2023-09-24.13:14:39::SCWMssOS::_cortexa9_0/lib/xil_cache.o ps7_cortexa9_0/lib/xspips_g.o ps7_cortexa9_0/lib/xil_testio.o ps7_cortexa9_0/lib/unlink.o ps7_corte
+TRACE::2023-09-24.13:14:39::SCWMssOS::xa9_0/lib/translation_table.o ps7_cortexa9_0/lib/write.o ps7_cortexa9_0/lib/xil_mmu.o ps7_cortexa9_0/lib/boot.o ps7_cortexa9_0/
+TRACE::2023-09-24.13:14:39::SCWMssOS::lib/xiicps_selftest.o ps7_cortexa9_0/lib/cpu_init.o ps7_cortexa9_0/lib/usleep.o ps7_cortexa9_0/lib/xspips_options.o ps7_cortexa
+TRACE::2023-09-24.13:14:39::SCWMssOS::9_0/lib/xil_sleepcommon.o ps7_cortexa9_0/lib/xscugic_g.o ps7_cortexa9_0/lib/xgpiops_intr.o ps7_cortexa9_0/lib/xscugic_sinit.o p
+TRACE::2023-09-24.13:14:39::SCWMssOS::s7_cortexa9_0/lib/xdevcfg_g.o ps7_cortexa9_0/lib/xscugic_selftest.o ps7_cortexa9_0/lib/xgpio_intr.o ps7_cortexa9_0/lib/xspips_h
+TRACE::2023-09-24.13:14:39::SCWMssOS::w.o ps7_cortexa9_0/lib/xtime_l.o ps7_cortexa9_0/lib/xil_util.o ps7_cortexa9_0/lib/xuartps_intr.o ps7_cortexa9_0/lib/xsdps_card.
+TRACE::2023-09-24.13:14:39::SCWMssOS::o ps7_cortexa9_0/lib/xdmaps_hw.o ps7_cortexa9_0/lib/xgpio.o ps7_cortexa9_0/lib/xgpiops_hw.o ps7_cortexa9_0/lib/fstat.o ps7_cort
+TRACE::2023-09-24.13:14:39::SCWMssOS::exa9_0/lib/errno.o ps7_cortexa9_0/lib/xdevcfg_intr.o ps7_cortexa9_0/lib/xuartps_options.o ps7_cortexa9_0/lib/vectors.o ps7_cort
+TRACE::2023-09-24.13:14:39::SCWMssOS::exa9_0/lib/xscuwdt_g.o ps7_cortexa9_0/lib/xscuwdt_sinit.o ps7_cortexa9_0/lib/xscuwdt_selftest.o ps7_cortexa9_0/lib/xgpio_extra.
+TRACE::2023-09-24.13:14:39::SCWMssOS::o ps7_cortexa9_0/lib/xil-crt0.o ps7_cortexa9_0/lib/xscugic.o ps7_cortexa9_0/lib/xiicps_sinit.o ps7_cortexa9_0/lib/xuartps_hw.o 
+TRACE::2023-09-24.13:14:39::SCWMssOS::ps7_cortexa9_0/lib/xadcps_g.o ps7_cortexa9_0/lib/xqspips_sinit.o ps7_cortexa9_0/lib/xadcps_sinit.o
+
+TRACE::2023-09-24.13:14:42::SCWMssOS::'Finished building libraries'
+
+TRACE::2023-09-24.13:14:44::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-09-24.13:14:44::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2023-09-24.13:14:44::SCWSystem::Completed Processing the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2023-09-24.13:14:44::SCWSystem::Completed Processing the sysconfig camera
+LOG::2023-09-24.13:14:44::SCWPlatform::Completed generating the artifacts for system configuration camera
+TRACE::2023-09-24.13:14:44::SCWPlatform::Started preparing the platform 
+TRACE::2023-09-24.13:14:44::SCWSystem::Writing the bif file for system config camera
+TRACE::2023-09-24.13:14:44::SCWSystem::dir created 
+TRACE::2023-09-24.13:14:44::SCWSystem::Writing the bif 
+TRACE::2023-09-24.13:14:44::SCWPlatform::Started writing the spfm file 
+TRACE::2023-09-24.13:14:44::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-09-24.13:14:44::SCWPlatform::Completed generating the platform
+TRACE::2023-09-24.13:14:44::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:14:44::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:14:44::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:44::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:14:44::SCWMssOS::Running validate of swdbs.
+KEYINFO::2023-09-24.13:14:44::SCWMssOS::Could not open the swdb for system_0
+KEYINFO::2023-09-24.13:14:44::SCWMssOS::Could not open the sw design at  system_0
+ERROR: [Hsi 55-1558] Software Design system_0 is not found
+
+TRACE::2023-09-24.13:14:44::SCWMssOS::Cleared the swdb table entry
+TRACE::2023-09-24.13:14:44::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2023-09-24.13:14:44::SCWMssOS::Writing the mss file completed C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:14:44::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:44::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:44::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_1
+TRACE::2023-09-24.13:14:44::SCWPlatform::Opened existing hwdb bd_wrapper_1
+TRACE::2023-09-24.13:14:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:44::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:44::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:44::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:44::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_1
+TRACE::2023-09-24.13:14:44::SCWPlatform::Opened existing hwdb bd_wrapper_1
+TRACE::2023-09-24.13:14:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:44::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:44::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWWriter::formatted JSON is {
+	"platformName":	"camera",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"camera",
+	"platHandOff":	"C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa",
+	"platIntHandOff":	"<platformDir>/hw/camera.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"camera",
+	"systems":	[{
+			"systemName":	"camera",
+			"systemDesc":	"camera",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"camera",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"0eb1d9e29255ab9f8614edc83f948c5a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.7",
+					"mssFile":	"",
+					"md5Digest":	"9dabae792a78c56bfb586a2fa37505ee",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-09-24.13:14:44::SCWPlatform::updated the xpfm file.
+TRACE::2023-09-24.13:14:44::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:14:44::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:14:44::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:14:44::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_1
+TRACE::2023-09-24.13:14:44::SCWPlatform::Opened existing hwdb bd_wrapper_1
+TRACE::2023-09-24.13:14:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:14:44::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:14:44::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:14:44::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:36::SCWPlatform::Clearing the existing platform
+TRACE::2023-09-24.13:36:36::SCWSystem::Clearing the existing sysconfig
+TRACE::2023-09-24.13:36:36::SCWBDomain::clearing the fsbl build
+TRACE::2023-09-24.13:36:36::SCWMssOS::Removing the swdes entry for  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:36::SCWMssOS::Removing the swdes entry for  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:36::SCWSystem::Clearing the domains completed.
+TRACE::2023-09-24.13:36:36::SCWPlatform::Clearing the opened hw db.
+TRACE::2023-09-24.13:36:36::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform:: Platform location is C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:36::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:36::SCWPlatform::Removing the HwDB with name C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:36::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:36::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:36::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened new HwDB with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWReader::Active system found as  camera
+TRACE::2023-09-24.13:36:39::SCWReader::Handling sysconfig camera
+TRACE::2023-09-24.13:36:39::SCWDomain::checking for install qemu data   : 
+TRACE::2023-09-24.13:36:39::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2023-09-24.13:36:39::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-09-24.13:36:39::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2023-09-24.13:36:39::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:36:39::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:39::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:39::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2023-09-24.13:36:39::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:36:39::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:36:39::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:36:39::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2023-09-24.13:36:39::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:39::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWReader::No isolation master present  
+TRACE::2023-09-24.13:36:39::SCWDomain::checking for install qemu data   : 
+TRACE::2023-09-24.13:36:39::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2023-09-24.13:36:39::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:39::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2023-09-24.13:36:39::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:36:39::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:36:39::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:36:39::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:36:39::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2023-09-24.13:36:39::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:39::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWReader::No isolation master present  
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:39::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:39::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:39::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:39::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:39::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::In reload Mss file.
+TRACE::2023-09-24.13:36:40::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:40::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:40::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:40::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:40::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2023-09-24.13:36:40::SCWMssOS::Could not open the swdb for system_0
+KEYINFO::2023-09-24.13:36:40::SCWMssOS::Could not open the sw design at  system_0
+ERROR: [Hsi 55-1558] Software Design system_0 is not found
+
+TRACE::2023-09-24.13:36:40::SCWMssOS::Cleared the swdb table entry
+TRACE::2023-09-24.13:36:40::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2023-09-24.13:36:40::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:36:40::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:36:40::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:36:40::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:36:40::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:40::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:40::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:40::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:40::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:40::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::Removing the swdes entry for  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:40::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:40::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:40::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:40::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:40::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:40::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::In reload Mss file.
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:41::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2023-09-24.13:36:41::SCWMssOS::Could not open the swdb for system
+KEYINFO::2023-09-24.13:36:41::SCWMssOS::Could not open the sw design at  system
+ERROR: [Hsi 55-1558] Software Design system is not found
+
+TRACE::2023-09-24.13:36:41::SCWMssOS::Cleared the swdb table entry
+TRACE::2023-09-24.13:36:41::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2023-09-24.13:36:41::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:36:41::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:41::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:41::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:41::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:41::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2023-09-24.13:36:41::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:36:41::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:36:41::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:36:41::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:36:41::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:36:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:36:41::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2023-09-24.13:36:41::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:36:41::SCWMssOS::Removing the swdes entry for  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+LOG::2023-09-24.13:48:29::SCWPlatform::Started generating the artifacts platform camera
+TRACE::2023-09-24.13:48:29::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-09-24.13:48:29::SCWPlatform::Started generating the artifacts for system configuration camera
+LOG::2023-09-24.13:48:29::SCWSystem::Checking the domain zynq_fsbl
+LOG::2023-09-24.13:48:29::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2023-09-24.13:48:29::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2023-09-24.13:48:29::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2023-09-24.13:48:29::SCWSystem::Checking the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2023-09-24.13:48:29::SCWSystem::Not a boot domain 
+LOG::2023-09-24.13:48:29::SCWSystem::Started Processing the domain freertos10_xilinx_ps7_cortexa9_0
+TRACE::2023-09-24.13:48:29::SCWDomain::Generating domain artifcats
+TRACE::2023-09-24.13:48:29::SCWMssOS::Generating standalone artifcats
+TRACE::2023-09-24.13:48:29::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt To C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/qemu/
+TRACE::2023-09-24.13:48:29::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt To C:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_ps7_cortexa9_0/qemu/
+TRACE::2023-09-24.13:48:29::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-09-24.13:48:29::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:29::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:29::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:29::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:48:29::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:29::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:48:29::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:48:29::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:48:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:48:29::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:29::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-09-24.13:48:29::SCWMssOS::No sw design opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:29::SCWMssOS::mss exists loading the mss file  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:29::SCWMssOS::Opened the sw design from mss  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:29::SCWMssOS::Adding the swdes entry C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system
+TRACE::2023-09-24.13:48:29::SCWMssOS::updating the scw layer about changes
+TRACE::2023-09-24.13:48:29::SCWMssOS::Opened the sw design.  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:29::SCWMssOS::Completed writing the mss file at C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp
+TRACE::2023-09-24.13:48:29::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:29::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-09-24.13:48:29::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-09-24.13:48:29::SCWDomain::Skipping the build for domain :  freertos10_xilinx_ps7_cortexa9_0
+TRACE::2023-09-24.13:48:29::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-09-24.13:48:29::SCWMssOS::Copying to export directory.
+TRACE::2023-09-24.13:48:30::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-09-24.13:48:30::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2023-09-24.13:48:30::SCWSystem::Completed Processing the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2023-09-24.13:48:30::SCWSystem::Completed Processing the sysconfig camera
+LOG::2023-09-24.13:48:30::SCWPlatform::Completed generating the artifacts for system configuration camera
+TRACE::2023-09-24.13:48:30::SCWPlatform::Started preparing the platform 
+TRACE::2023-09-24.13:48:30::SCWSystem::Writing the bif file for system config camera
+TRACE::2023-09-24.13:48:30::SCWSystem::dir created 
+TRACE::2023-09-24.13:48:30::SCWSystem::Writing the bif 
+TRACE::2023-09-24.13:48:30::SCWPlatform::Started writing the spfm file 
+TRACE::2023-09-24.13:48:30::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-09-24.13:48:30::SCWPlatform::Completed generating the platform
+TRACE::2023-09-24.13:48:30::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_0
+TRACE::2023-09-24.13:48:30::SCWMssOS::Writing the mss file completed C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:48:30::SCWMssOS::Saving the mss changes C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-09-24.13:48:30::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-09-24.13:48:30::SCWMssOS::Commit changes completed.
+TRACE::2023-09-24.13:48:30::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:48:30::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:48:30::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:48:30::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:48:30::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:48:30::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2023-09-24.13:48:30::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:48:30::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:48:30::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:48:30::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:48:30::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:48:30::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2023-09-24.13:48:30::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWWriter::formatted JSON is {
+	"platformName":	"camera",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"camera",
+	"platHandOff":	"C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa",
+	"platIntHandOff":	"<platformDir>/hw/camera.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"camera",
+	"systems":	[{
+			"systemName":	"camera",
+			"systemDesc":	"camera",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"camera",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"0eb1d9e29255ab9f8614edc83f948c5a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.7",
+					"mssFile":	"",
+					"md5Digest":	"9dabae792a78c56bfb586a2fa37505ee",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-09-24.13:48:30::SCWPlatform::updated the xpfm file.
+TRACE::2023-09-24.13:48:30::SCWPlatform::Trying to open the hw design at C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA given C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA absoulate path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform::DSA directory C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw
+TRACE::2023-09-24.13:48:30::SCWPlatform:: Platform Path C:/Users/georgewaller/Desktop/CameraProcessor/camera/hw/camera.xsa
+TRACE::2023-09-24.13:48:30::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2023-09-24.13:48:30::SCWPlatform::Trying to set the existing hwdb with name bd_wrapper_4
+TRACE::2023-09-24.13:48:30::SCWPlatform::Opened existing hwdb bd_wrapper_4
+TRACE::2023-09-24.13:48:30::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-09-24.13:48:30::SCWMssOS::Checking the sw design at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2023-09-24.13:48:30::SCWMssOS::DEBUG:  swdes dump  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system||
+C:/Users/georgewaller/Desktop/CameraProcessor/camera/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2023-09-24.13:48:30::SCWMssOS::Sw design exists and opened at  C:/Users/georgewaller/Desktop/CameraProcessor/camera/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss

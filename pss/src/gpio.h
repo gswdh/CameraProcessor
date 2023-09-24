@@ -38,11 +38,28 @@ typedef enum
     SEN_TEXP1_PIN = 53
 } gpio_pins_t;
 
+#define FPGA_DEBUG_0 (0x0001)
+#define FPGA_DEBUG_1 (0x0002)
+#define FPGA_DEBUG_2 (0x0004)
+#define FPGA_DEBUG_3 (0x0008)
+#define FPGA_DEBUG_4 (0x0010)
+#define FPGA_DEBUG_5 (0x0020)
+#define FPGA_DEBUG_6 (0x0040)
+#define FPGA_DEBUG_7 (0x0080)
+#define FPGA_DEBUG_CLK (0x0100)
+#define FPGA_DEBUG_EN (0x0200)
+#define FPGA_STATUS_D0 (0x0400)
+#define FPGA_STATUS_D1 (0x0800)
+#define FPGA_STATUS_D2 (0x1000)
+#define FPGA_LED_D0 (0x2000)
+#define FPGA_LED_D1 (0x4000)
+#define FPGA_LED_D2 (0x8000)
+
 void gpio_init();
 bool gpio_get(gpio_pins_t pin);
 void gpio_set(gpio_pins_t pin, bool state);
+bool gpio_pl_get(uint32_t pin_mask);
+void gpio_pl_set(uint32_t pin_mask, bool state);
 void gpio_task(void *params);
 
 #endif
-
-
