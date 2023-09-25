@@ -12,6 +12,11 @@ typedef enum
 {
     BTN_TOPLEFT_PIN = 1,
     BTN_BTMRIGHT_PIN = 9,
+    PSS_SPI_SCLK= 16,
+    PSS_SPI_MISO = 17,
+    SEN_SPI_NCS = 18,
+    DSP_SPI_NCS = 19,
+    PSS_SPI_MOSI = 21,
     SEN_SYS_NRESET_PIN = 28,
     DSP_NRESET_PIN = 29,
     PWR_SEN_3V6_EN_PIN = 30,

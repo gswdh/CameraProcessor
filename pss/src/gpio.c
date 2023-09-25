@@ -22,7 +22,8 @@ XGpio gpio_pl = {0};
 
 TaskHandle_t gpio_task_handle = {0};
 
-const gpio_pins_t gpio_outputs[] = {SEN_SYS_NRESET_PIN,
+const gpio_pins_t gpio_outputs[] = {PSS_SPI_SCLK, SEN_SPI_NCS, DSP_SPI_NCS, PSS_SPI_MOSI,
+SEN_SYS_NRESET_PIN,
 DSP_NRESET_PIN,
 PWR_SEN_3V6_EN_PIN,
 PWR_EVF_AVDD_EN_PIN,
@@ -39,6 +40,19 @@ PSS_PMC_FLAG_PIN,
 SEN_TEXP1_PIN,
 PWR_SEN_0V7_EN_PIN};
 
+const gpio_pins_t gpio_inputs[] = {
+BTN_TOPLEFT_PIN,
+PSS_SPI_MISO,
+BTN_BTMRIGHT_PIN,
+TMP_ALERT_PIN,
+BTN_BTMLEFT_PIN,
+TMP_THERM_PIN,
+BTN_THUMB_PIN,
+SEN_TDIG0_PIN,
+SEN_TDIG1_PIN,
+BTN_TOPRIGHT_PIN,
+PMC_PSS_FLAG_PIN};
+
 void gpio_init()
 {
 	// PS based GPIO
@@ -46,16 +60,10 @@ void gpio_init()
 	XGpioPs_CfgInitialize(&gpio_ps, gpio_config, gpio_config->BaseAddr);
 
 	// Inputs
-	XGpioPs_SetDirectionPin(&gpio_ps, BTN_TOPLEFT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, BTN_BTMRIGHT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, TMP_ALERT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, BTN_BTMLEFT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, TMP_THERM_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, BTN_THUMB_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, SEN_TDIG0_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, SEN_TDIG1_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, BTN_TOPRIGHT_PIN, GPIO_DIR_INPUT);
-	XGpioPs_SetDirectionPin(&gpio_ps, PMC_PSS_FLAG_PIN, GPIO_DIR_INPUT);
+	for(uint32_t i = 0; i < sizeof(gpio_inputs); i++)
+	{
+		XGpioPs_SetDirectionPin(&gpio_ps, gpio_inputs[i], GPIO_DIR_INPUT);
+	}
 
 	// Outputs
 	for(uint32_t i = 0; i < sizeof(gpio_outputs); i++)
@@ -102,13 +110,23 @@ void gpio_task(void *params)
 {
 	uint32_t tick = xTaskGetTickCount();
 
+	bool value = false;
+
 	while (1)
 	{
 		if (xTaskGetTickCount() > (tick + 50))
 		{
 			tick = xTaskGetTickCount();
 
-			log_info(LOG_TAG, "TL = %u, BR = %u\n", gpio_get(BTN_TOPLEFT_PIN), gpio_get(BTN_BTMRIGHT_PIN));
+			gpio_pl_set(FPGA_LED_D0, value);
+			value = !value;
+
+			log_info(LOG_TAG, "TL = %u, TR = %u, BL = %u, BR = %u, TM = %u\n",
+					gpio_get(BTN_TOPLEFT_PIN),
+					gpio_get(BTN_TOPRIGHT_PIN),
+					gpio_get(BTN_BTMLEFT_PIN),
+					gpio_get(BTN_BTMRIGHT_PIN),
+					gpio_get(BTN_THUMB_PIN));
 		}
 	}
 }

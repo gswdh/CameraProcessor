@@ -199,3 +199,65 @@ timestamp=[2023-09-24 13:53:44], mode=BUILD, duration=0:00:01.492, duration_ms=1
 timestamp=[2023-09-24 13:53:52], mode=BUILD, duration=0:00:07.774, duration_ms=7774, data={name=pss_system, configuration=Debug, clean_build=false}
 timestamp=[2023-09-24 13:53:52], mode=BUILD, duration=0:00:00.326, duration_ms=326, data={name=xgpio_example_1, configuration=Debug, clean_build=false}
 timestamp=[2023-09-24 13:54:00], mode=BUILD, duration=0:00:07.572, duration_ms=7572, data={name=xgpio_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:02:02], mode=BUILD, duration=0:00:02.319, duration_ms=2319, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:02:11], mode=BUILD, duration=0:00:08.964, duration_ms=8964, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:03:10], mode=BUILD, duration=0:00:00.358, duration_ms=358, data={name=pss, configuration=Debug, clean_build=true}
+timestamp=[2023-09-24 18:03:12], mode=BUILD, duration=0:00:01.600, duration_ms=1600, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:03:16], mode=BUILD, duration=0:00:04.003, duration_ms=4003, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:03:51], mode=BUILD, duration=0:00:02.125, duration_ms=2125, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:03:55], mode=BUILD, duration=0:00:03.947, duration_ms=3947, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:04:18], mode=BUILD, duration=0:00:01.399, duration_ms=1399, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:04:26], mode=BUILD, duration=0:00:07.829, duration_ms=7829, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:05:44], mode=BUILD, duration=0:00:01.219, duration_ms=1219, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:05:52], mode=BUILD, duration=0:00:07.627, duration_ms=7627, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:06:54], mode=BUILD, duration=0:00:00.563, duration_ms=563, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:07:02], mode=BUILD, duration=0:00:07.454, duration_ms=7454, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:45:32], mode=PLATFORM_GENERATION, duration=0:00:32.543, duration_ms=32543, data={name=camera}
+timestamp=[2023-09-24 18:45:44], mode=BUILD, duration=0:00:04.094, duration_ms=4094, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:46:03], mode=BUILD, duration=0:00:04.096, duration_ms=4096, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:46:26], mode=BUILD, duration=0:00:02.907, duration_ms=2907, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:46:34], mode=BUILD, duration=0:00:08.404, duration_ms=8404, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:47:13], mode=BUILD, duration=0:00:01.189, duration_ms=1189, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:47:21], mode=BUILD, duration=0:00:07.773, duration_ms=7773, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:58:57], mode=BUILD, duration=0:00:00.688, duration_ms=688, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:59:09], mode=BUILD, duration=0:00:11.786, duration_ms=11786, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:59:24], mode=BUILD, duration=0:00:01.200, duration_ms=1200, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 18:59:32], mode=BUILD, duration=0:00:07.752, duration_ms=7752, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:03:03], mode=BUILD, duration=0:00:01.133, duration_ms=1133, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:03:21], mode=BUILD, duration=0:00:16.775, duration_ms=16775, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:08:50], mode=PLATFORM_GENERATION, duration=0:00:06.906, duration_ms=6906, data={name=camera}
+timestamp=[2023-09-24 19:08:53], mode=BUILD, duration=0:00:03.014, duration_ms=3014, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:09:01], mode=BUILD, duration=0:00:07.830, duration_ms=7830, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:11:02], mode=BUILD, duration=0:00:00.570, duration_ms=570, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:11:10], mode=BUILD, duration=0:00:07.762, duration_ms=7762, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:15:26], mode=BUILD, duration=0:00:01.419, duration_ms=1419, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:15:34], mode=BUILD, duration=0:00:07.703, duration_ms=7703, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:19:04], mode=BUILD, duration=0:00:01.179, duration_ms=1179, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:19:12], mode=BUILD, duration=0:00:07.515, duration_ms=7515, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:25:02], mode=BUILD, duration=0:00:01.109, duration_ms=1109, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 19:25:10], mode=BUILD, duration=0:00:07.385, duration_ms=7385, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:21:06], mode=BUILD, duration=0:00:00.751, duration_ms=751, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:21:23], mode=BUILD, duration=0:00:16.627, duration_ms=16627, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:22:01], mode=BUILD, duration=0:00:01.198, duration_ms=1198, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:22:10], mode=BUILD, duration=0:00:07.898, duration_ms=7898, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:32:56], mode=PLATFORM_GENERATION, duration=0:00:08.019, duration_ms=8019, data={name=camera}
+timestamp=[2023-09-24 22:33:02], mode=BUILD, duration=0:00:05.417, duration_ms=5417, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:33:11], mode=BUILD, duration=0:00:08.460, duration_ms=8460, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:34:35], mode=BUILD, duration=0:00:01.268, duration_ms=1268, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:34:44], mode=BUILD, duration=0:00:08.208, duration_ms=8208, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:40:38], mode=APP_CREATION, duration=0:00:38.276, duration_ms=38276, data={name=fsbl, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=camera_fsbl, application_type=application}
+timestamp=[2023-09-24 22:42:24], mode=PLATFORM_GENERATION, duration=0:01:11.363, duration_ms=71363, data={name=camera_fsbl}
+timestamp=[2023-09-24 22:42:42], mode=BUILD, duration=0:00:18.002, duration_ms=18002, data={name=fsbl, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:43:05], mode=BUILD, duration=0:00:21.304, duration_ms=21304, data={name=fsbl_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:43:33], mode=MISC, duration=0:00:06.144, duration_ms=6144, data={name=pss_system, type=bif_creation}
+timestamp=[2023-09-24 22:50:04], mode=BUILD, duration=0:00:00.624, duration_ms=624, data={name=fsbl, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:50:14], mode=BUILD, duration=0:00:08.700, duration_ms=8700, data={name=fsbl_system, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:53:40], mode=PLATFORM_GENERATION, duration=0:00:06.771, duration_ms=6771, data={name=camera_fsbl}
+timestamp=[2023-09-24 22:53:40], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=fsbl, configuration=Debug, clean_build=true}
+timestamp=[2023-09-24 22:53:41], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=fsbl_system, configuration=Debug, clean_build=true}
+timestamp=[2023-09-24 22:54:42], mode=PLATFORM_GENERATION, duration=0:00:10.387, duration_ms=10387, data={name=camera_fsbl}
+timestamp=[2023-09-24 22:55:15], mode=PLATFORM_GENERATION, duration=0:00:08.326, duration_ms=8326, data={name=camera}
+timestamp=[2023-09-24 22:56:05], mode=PLATFORM_GENERATION, duration=0:00:45.588, duration_ms=45588, data={name=camera}
+timestamp=[2023-09-24 22:56:57], mode=PLATFORM_GENERATION, duration=0:00:11.716, duration_ms=11716, data={name=camera_fsbl}
+timestamp=[2023-09-24 22:57:01], mode=BUILD, duration=0:00:03.744, duration_ms=3744, data={name=fsbl, configuration=Debug, clean_build=false}
+timestamp=[2023-09-24 22:57:10], mode=BUILD, duration=0:00:08.643, duration_ms=8643, data={name=fsbl_system, configuration=Debug, clean_build=false}
