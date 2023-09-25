@@ -12,6 +12,7 @@
 
 // Abstractions
 #include "logging.h"
+#include "sys.h"
 
 #define LOG_TAG "GPIO"
 
@@ -110,16 +111,15 @@ void gpio_task(void *params)
 {
 	uint32_t tick = xTaskGetTickCount();
 
-	bool value = false;
-
 	while (1)
 	{
-		if (xTaskGetTickCount() > (tick + 50))
+		if (xTaskGetTickCount() > (tick + 100))
 		{
 			tick = xTaskGetTickCount();
 
-			gpio_pl_set(FPGA_LED_D0, value);
-			value = !value;
+			gpio_pl_set(FPGA_LED_D0, true);
+			sys_delay_ms(1);
+			gpio_pl_set(FPGA_LED_D0, false);
 
 			log_info(LOG_TAG, "TL = %u, TR = %u, BL = %u, BR = %u, TM = %u\n",
 					gpio_get(BTN_TOPLEFT_PIN),

@@ -45,3 +45,12 @@ platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
 platform write
 platform clean
 platform generate
+platform active {camera}
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 

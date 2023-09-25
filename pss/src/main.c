@@ -18,7 +18,7 @@
 #include "logging.h"
 #include "sensor.h"
 
-#define LOG_TAG ("MAIN")
+#define LOG_TAG "MAIN"
 
 void main_task(void * params)
 {

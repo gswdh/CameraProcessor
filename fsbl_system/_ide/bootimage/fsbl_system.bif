@@ -1,0 +1,12 @@
+/* C:/Users/georgewaller/AppData/Local/Temp/bootgen_fsbl_system8101612198928746492/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen  -image <bif_file> -w -o i BOOT.BIN */
+/*camera_fsbl*/
+the_ROM_image:
+{
+ [bootloader] C:/Users/georgewaller/Desktop/CameraProcessor/camera_fsbl/export/camera_fsbl/sw/camera_fsbl/boot/fsbl.elf
+ C:/Users/georgewaller/Desktop/CameraProcessor/fsbl/_ide/bitstream/camera.bit
+ C:/Users/georgewaller/Desktop/CameraProcessor/fsbl/Debug/fsbl.elf
+}
