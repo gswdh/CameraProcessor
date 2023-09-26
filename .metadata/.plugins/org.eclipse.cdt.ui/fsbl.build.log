@@ -1,4 +1,4 @@
-09:07:03 **** Incremental Build of configuration Debug for project fsbl ****
+21:43:56 **** Incremental Build of configuration Debug for project fsbl ****
 make all 
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-09:07:04 Build Finished (took 697ms)
+21:43:57 Build Finished (took 831ms)
 

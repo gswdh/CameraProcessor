@@ -1,6 +1,2 @@
-14:06:46 **** Incremental Build of project camera ****
-buildplatform.bat 64563 camera no_domain_build 
-XSDB Server Channel: tcfchan#103
-
-14:06:49 Build Finished (took 3s.841ms)
+Nothing to build in platform 'camera'
 

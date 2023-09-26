@@ -10,7 +10,7 @@
 
 typedef enum
 {
-    BTN_TOPLEFT_PIN = 1,
+    BTN_TOPLEFT_PIN = 0,
     BTN_BTMRIGHT_PIN = 9,
     PSS_SPI_SCLK= 16,
     PSS_SPI_MISO = 17,

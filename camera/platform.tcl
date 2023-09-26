@@ -54,3 +54,8 @@ platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
 platform generate -domains 
 platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
 platform generate -domains 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+domain active {freertos10_xilinx_ps7_cortexa9_0}
+bsp reload
+platform generate -domains 

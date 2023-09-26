@@ -138,8 +138,8 @@ void gmax_spi_read(uint8_t reg, uint8_t * data, uint32_t len)
 	// Give some timing
 	nop_delay();
 
-	// Set the data to true for a write operation and enable
-	gpio_set(PSS_SPI_MOSI, true);
+	// Reset the data to true for a write operation and enable
+	gpio_set(PSS_SPI_MOSI, false);
 	gpio_set(SEN_SPI_NCS, true);
 
 	nop_delay();
@@ -188,7 +188,7 @@ void gmax_spi_read(uint8_t reg, uint8_t * data, uint32_t len)
 
 			// Rising clock edge
 			gpio_set(PSS_SPI_SCLK, true);
-			data[i] |= (gpio_get(PSS_SPI_MISO) << (7 - j)) & 0x01;
+			data[i] |= (gpio_get(PSS_SPI_MISO) << (7 - j));
 
 			// Hold time
 			nop_delay();
@@ -261,12 +261,8 @@ void sensor_start()
 
 void sensor_task(void * params)
 {
-	uint8_t data[256] = {0};
-
 	while(1)
 	{
-		gmax_spi_read(0x00, data, 256);
-
 		sys_delay_ms(100);
 	}
 }
