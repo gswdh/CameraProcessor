@@ -12,6 +12,7 @@
 // Peripheral includes
 #include "gpio.h"
 #include "spi.h"
+#include "stream.h"
 
 // Abstraction includes
 #include "gui.h"
@@ -20,6 +21,11 @@
 
 #define LOG_TAG "MAIN"
 
+void strm_event_cb(strm_event_t evt)
+{
+	log_info(LOG_TAG, "Stream event = %u\n", evt);
+}
+
 void main_task(void * params)
 {
 	log_info(LOG_TAG, "Starting system.\n");
@@ -27,6 +33,7 @@ void main_task(void * params)
 	// Perph inits (must be done before abstraction)
 	spi_init();
 	gpio_init();
+	strm_init(strm_event_cb);
 
 	// Abstraction starts
 	gui_start();

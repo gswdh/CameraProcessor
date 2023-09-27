@@ -1,0 +1,88 @@
+#include "stream.h"
+
+// Xilinx
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+
+// Abstractions
+#include "logging.h"
+#include "sys.h"
+
+// FreeRTOS
+#include "FreeRTOS.h"
+#include "task.h"
+
+#define LOG_TAG "STRM"
+
+XAxiDma dma = {0};
+
+bool strm_rx_done = false;
+strm_callback callback = NULL;
+
+static void strm_tx_intr_handler(void * callback)
+{
+
+}
+
+static void strm_tx_intr_handler(void * callback)
+{
+
+}
+
+void strm_init(strm_callback cb)
+{
+	// Assign the local callback
+	callback = cb;
+
+	// Init the DMA
+	XAxiDma_Config *config = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
+	XAxiDma_CfgInitialize(&dma, config);
+
+	// Start the task
+	TaskHandle_t strm_task_handle = {0};
+	xTaskCreate(strm_task, LOG_TAG, 1024, NULL, tskIDLE_PRIORITY, &strm_task_handle);
+}
+
+void strm_send(uint8_t * data, uint32_t len)
+{
+	XAxiDma_SimpleTransfer(&dma, data, len, XAXIDMA_DMA_TO_DEVICE);
+}
+
+void strm_receive_init(uint8_t * data, uint32_t len)
+{
+	XAxiDma_SimpleTransfer(&dma, data, len, XAXIDMA_DEVICE_TO_DMA);
+}
+
+bool strm_receive_done()
+{
+	return strm_rx_done;
+}
+
+void strm_task(void * params)
+{
+	if(callback == NULL)
+	{
+		log_error(LOG_TAG, "Callback is NULL, needs to be defined.");
+		vTaskDelete(NULL);
+	}
+
+	uint8_t data[1024] = {0};
+	memset(data, 0x55, 1024);
+	
+	uint32_t tick = sys_tick_ms();
+
+	while(1)
+	{
+		if(strm_rx_done)
+		{
+			callback(STRM_EVENT_RX_DONE);
+		}
+
+		if(sys_tick_ms() > (tick + 100))
+		{
+			tick = sys_tick_ms();
+			strm_send(data, 1024);
+		}
+	}
+}

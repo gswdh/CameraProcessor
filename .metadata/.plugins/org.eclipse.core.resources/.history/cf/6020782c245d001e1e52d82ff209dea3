@@ -1,0 +1,140 @@
+#include "stream.h"
+
+// Xilinx
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+
+// Abstractions
+#include "logging.h"
+#include "sys.h"
+
+// FreeRTOS
+#include "FreeRTOS.h"
+#include "task.h"
+
+#define LOG_TAG "STRM"
+
+XAxiDma dma = {0};
+XScuGic intr = {0};
+
+bool strm_rx_done = false;
+strm_callback callback = NULL;
+
+static void strm_tx_intr_handler(void * callback)
+{
+	XAxiDma *dma_int = (XAxiDma *)callback;
+
+	// Get interrupts
+	uint32_t irq_status = XAxiDma_IntrGetIrq(dma_int, XAXIDMA_DMA_TO_DEVICE);
+
+	// Reset flags
+	XAxiDma_IntrAckIrq(dma_int, irq_status, XAXIDMA_DMA_TO_DEVICE);
+
+	// If nothing has happened
+	if (!(irq_status & XAXIDMA_IRQ_ALL_MASK)) 
+	{
+
+		return;
+	}
+
+	// Hardware error
+	if ((IrqStatus & XAXIDMA_IRQ_ERROR_MASK)) {
+
+		Error = 1;
+
+		/*
+		 * Reset should never fail for transmit channel
+		 */
+		XAxiDma_Reset(dma_int);
+		return;
+	}
+
+	// If TX is complete
+	if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK)) 
+	{
+
+		asm("nop");
+	}
+}
+
+static void strm_rx_intr_handler(void * callback)
+{
+
+}
+
+void strm_init(strm_callback cb)
+{
+	// Assign the local callback
+	callback = cb;
+
+	// Init the DMA
+	XAxiDma_Config *config = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
+	XAxiDma_CfgInitialize(&dma, config);
+
+
+	// Init the interrupts
+	XScuGic_Config * intr_config = XScuGic_LookupConfig(XPAR_SCUGIC_SINGLE_DEVICE_ID);
+	XScuGic_CfgInitialize(&intr, intr_config, intr_config->CpuBaseAddress);
+	XScuGic_SetPriorityTriggerType(&intr, XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID, 0xA0, 0x3);
+	XScuGic_SetPriorityTriggerType(&intr, XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID, 0xA0, 0x3);
+	XScuGic_Connect(&intr, XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID, XInterruptHandler strm_tx_intr_handler, &dma);
+	XScuGic_Connect(&intr, XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID, XInterruptHandler strm_rx_intr_handler, &dma);
+	XScuGic_Enable(&intr, XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID);
+	XScuGic_Enable(&intr, XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID);
+
+	// Enable exceptions
+	Xil_ExceptionInit();
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			(void *)&intr);
+	Xil_ExceptionEnable();
+
+	// Start the task
+	TaskHandle_t strm_task_handle = {0};
+	xTaskCreate(strm_task, LOG_TAG, 1024, NULL, tskIDLE_PRIORITY, &strm_task_handle);
+}
+
+void strm_send(uint8_t * data, uint32_t len)
+{
+	XAxiDma_SimpleTransfer(&dma, (UINTPTR)data, len, XAXIDMA_DMA_TO_DEVICE);
+}
+
+void strm_receive_init(uint8_t * data, uint32_t len)
+{
+	XAxiDma_SimpleTransfer(&dma, (UINTPTR)data, len, XAXIDMA_DEVICE_TO_DMA);
+}
+
+bool strm_receive_done()
+{
+	return strm_rx_done;
+}
+
+void strm_task(void * params)
+{
+	if(callback == NULL)
+	{
+		log_error(LOG_TAG, "Callback is NULL, needs to be defined.");
+		vTaskDelete(NULL);
+	}
+
+	uint8_t data[1024] = {0};
+	memset(data, 0x55, 1024);
+	
+	uint32_t tick = sys_tick_ms();
+
+	while(1)
+	{
+		if(strm_rx_done)
+		{
+			callback(STRM_EVENT_RX_DONE);
+		}
+
+		if(sys_tick_ms() > (tick + 100))
+		{
+			tick = sys_tick_ms();
+			strm_send(data, 1024);
+		}
+	}
+}
