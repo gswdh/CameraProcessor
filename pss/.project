@@ -3,7 +3,6 @@
 	<name>pss</name>
 	<comment>Created by Vitis v2020.2</comment>
 	<projects>
-		<project>camera</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

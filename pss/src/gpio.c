@@ -101,10 +101,11 @@ bool gpio_pl_get(uint32_t pin_mask)
 
 void gpio_pl_set(uint32_t pin_mask, bool state)
 {
-	if(state)
-		XGpio_DiscreteWrite(&gpio_pl, GPIO_FPGA_PORT_CHANNEL, pin_mask);
-	else
-		XGpio_DiscreteClear(&gpio_pl, GPIO_FPGA_PORT_CHANNEL, pin_mask);
+	uint32_t data = XGpio_DiscreteRead(&gpio_pl, GPIO_FPGA_PORT_CHANNEL);
+
+	data = state ? (data |= pin_mask) : (data &= ~pin_mask);
+	
+	XGpio_DiscreteWrite(&gpio_pl, GPIO_FPGA_PORT_CHANNEL, data);
 }
 
 void gpio_task(void *params)
