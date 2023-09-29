@@ -4,6 +4,12 @@
         <mruHistory/>
         <favorites/>
     </launchGroup>
+    <launchGroup id="com.xilinx.ide.launchGroup.system.vppbmrun">
+        <mruHistory>
+            <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/pss_system/_ide/launch/SystemDebugger_pss_system.launch&quot;/&gt;&#13;&#10;"/>
+        </mruHistory>
+        <favorites/>
+    </launchGroup>
     <launchGroup id="com.xilinx.ide.launchGroup.aie.debug">
         <mruHistory/>
         <favorites/>
@@ -54,11 +60,25 @@
         <mruHistory/>
         <favorites/>
     </launchGroup>
+    <launchGroup id="com.xilinx.ide.launchGroup.system.vppbmdebug">
+        <mruHistory>
+            <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/pss_system/_ide/launch/SystemDebugger_pss_system.launch&quot;/&gt;&#13;&#10;"/>
+        </mruHistory>
+        <favorites/>
+    </launchGroup>
     <launchGroup id="org.eclipse.debug.ui.launchGroup.profilee">
         <mruHistory/>
         <favorites/>
     </launchGroup>
     <launchGroup id="com.xilinx.ide.launchGroup.embacc.run">
+        <mruHistory/>
+        <favorites/>
+    </launchGroup>
+    <launchGroup id="com.xilinx.ide.launchGroup.bm.vpprun">
+        <mruHistory/>
+        <favorites/>
+    </launchGroup>
+    <launchGroup id="com.xilinx.ide.launchGroup.bm.vppdebug">
         <mruHistory/>
         <favorites/>
     </launchGroup>

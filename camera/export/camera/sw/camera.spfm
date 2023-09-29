@@ -16,7 +16,8 @@ camera
             <sdx:description>camera</sdx:description>
             <sdx:bootImages sdx:default="standard">
                 <sdx:image sdx:name="standard"
-                            sdx:bif="camera/boot/camera.bif"
+                            sdx:bif=""
+                            sdx:imageData=""
                             sdx:readme="camera/boot/generic.readme"
                             sdx:qemuArguments="camera/qemu/qemu_args.txt"
                             />

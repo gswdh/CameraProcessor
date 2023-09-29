@@ -70,7 +70,7 @@
 
 #define configUSE_CO_ROUTINES 0
 
-#define configTICK_RATE_HZ (100)
+#define configTICK_RATE_HZ (1000)
 
 #define configMAX_PRIORITIES (8)
 
@@ -100,7 +100,7 @@
 
 #define configCHECK_FOR_STACK_OVERFLOW 2
 
-#define configUSE_TASK_FPU_SUPPORT 1
+#define configUSE_TASK_FPU_SUPPORT 2
 
 #define configQUEUE_REGISTRY_SIZE 10
 
@@ -114,8 +114,10 @@
 
 #define portGET_RUN_TIME_COUNTER_VALUE()
 
+#define configUSE_PORT_OPTIMISED_TASK_SELECTION 1
+
 #define configUSE_TICKLESS_IDLE	0
-#define configTASK_RETURN_ADDRESS    NULL
+#define configTASK_RETURN_ADDRESS    prvTaskExitError
 #define INCLUDE_vTaskPrioritySet             1
 #define INCLUDE_uxTaskPriorityGet            1
 #define INCLUDE_vTaskDelete                  1
@@ -126,13 +128,12 @@
 #define INCLUDE_eTaskGetState                1
 #define INCLUDE_xTimerPendFunctionCall       1
 #define INCLUDE_pcTaskGetTaskName            1
+#define INCLUDE_xTaskGetHandle               1
 #define portPOINTER_SIZE_TYPE	uint32_t
 #define portTICK_TYPE_IS_ATOMIC 1
 #define configMESSAGE_BUFFER_LENGTH_TYPE uint32_t
 #define configSTACK_DEPTH_TYPE uint32_t
 #define configMAX_API_CALL_INTERRUPT_PRIORITY (18)
-
-#define configUSE_PORT_OPTIMISED_TASK_SELECTION 1
 
 #define configINTERRUPT_CONTROLLER_BASE_ADDRESS         ( XPAR_PS7_SCUGIC_0_DIST_BASEADDR )
 #define configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET ( -0xf00 )

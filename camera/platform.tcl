@@ -10,13 +10,12 @@
 
 platform create -name {camera}\
 -hw {C:\Users\georgewaller\Desktop\CameraFPGA\camera.xsa}\
--proc {ps7_cortexa9_0} -os {freertos10_xilinx} -fsbl-target {psu_cortexa53_0} -out {C:/Users/georgewaller/Desktop/CameraProcessor}
+-proc {ps7_cortexa9_0} -os {freertos10_xilinx} -out {C:/Users/georgewaller/Desktop/CameraProcessor}
 
 platform write
 platform generate -domains 
-platform generate
 platform clean
 platform generate
-platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
 bsp reload
-platform generate -domains 
+platform generate -domains freertos10_xilinx_domain 
+platform generate -domains freertos10_xilinx_domain 

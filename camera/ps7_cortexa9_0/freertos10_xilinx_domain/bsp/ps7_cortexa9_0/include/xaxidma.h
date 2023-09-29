@@ -1,5 +1,6 @@
 /******************************************************************************
-* Copyright (C) 2010 - 2020 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2010 - 2022 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2022 - 2023 Advanced Micro Devices, Inc.  All rights reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -7,7 +8,7 @@
 /**
 *
 * @file xaxidma.h
-* @addtogroup axidma_v9_12
+* @addtogroup AXIDMA Overview
 * @{
 * @details
 *
@@ -451,6 +452,10 @@
 * 9.6  rsp   01/11/18 Fixed CR#976392 In XAxiDma struct use UINTPTR for RegBase.
 *                     In XAxiDma_LookupConfigBaseAddr() use UINTPTR for Baseaddr.
 * 9.7  rsp   04/25/18 Add SgLengthWidth member in dma config structure. CR #1000474
+* 9.13 rsp   01/08/21 Fix compilation failure in XAxiDma_IntrGetEnabled().
+* 9.15  sa   08/12/22 Updated the examples to use latest MIG cannoical define
+* 		       i.e XPAR_MIG_0_C0_DDR4_MEMORY_MAP_BASEADDR.
+*      adk   08/16/22 Fix syntax error in the XAxiDma_BdRingGetCurrBd() API.
 * </pre>
 *
 ******************************************************************************/
@@ -643,7 +648,7 @@ typedef struct {
  *
  *****************************************************************************/
 #define   XAxiDma_IntrGetEnabled(InstancePtr, Direction)	\
-			XAxiDma_ReadReg((InstancePtr)->RegBase + \
+			(XAxiDma_ReadReg((InstancePtr)->RegBase + \
 			(XAXIDMA_RX_OFFSET * Direction), XAXIDMA_CR_OFFSET) &\
 							XAXIDMA_IRQ_ALL_MASK)
 

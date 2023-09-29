@@ -1,5 +1,6 @@
 /******************************************************************************
-* Copyright (C) 2010 - 2020 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2010 - 2021 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2022 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -7,14 +8,15 @@
 /**
 *
 * @file xiicps.h
-* @addtogroup iicps_v3_12
+* @addtogroup iicps Overview
 * @{
 * @details
 *
-* This is an implementation of IIC driver in the PS block. The device can
-* be either a master or a slave on the IIC bus. This implementation supports
-* both interrupt mode transfer and polled mode transfer. Only 7-bit address
-* is used in the driver, although the hardware also supports 10-bit address.
+* The xiicps.h header file is an implementation of IIC driver in the PS block.
+* The device can be either a master or a slave on the IIC bus.
+* This implementation supports both interrupt mode transfer and polled mode
+* transfer. Only 7-bit address is used in the driver, although the hardware
+* also supports 10-bit address.
 *
 * IIC is a 2-wire serial interface.  The master controls the clock, so it can
 * regulate when it wants to send or receive data. The slave is under control of
@@ -170,12 +172,15 @@
 * 3.11  rna  02/20/20 Reorganization of driver for modularity.
 *		      Added new files xiicps_xfer.c and xiicps_xfer.h.
 *		      Moved internal data transfer APIs to xiicps_xfer.
+* 3.13  rna  05/24/21 Fixed Misra-c violations
+* 3.16  gm   05/10/22 Added support to get the status of receive valid data.
+* 		      Added support for clock stretching and timeout support.
 * </pre>
 *
 ******************************************************************************/
 
 #ifndef XIICPS_H       /* prevent circular inclusions */
-#define XIICPS_H       /* by using protection macros */
+#define XIICPS_H       /**< by using protection macros */
 
 #ifdef __cplusplus
 extern "C" {
@@ -208,7 +213,7 @@ extern "C" {
 #define XIICPS_REP_START_OPTION		0x08U  /**< Repeated Start */
 
 
-/*@}*/
+/** @} */
 
 /** @name Callback events
  *
@@ -228,9 +233,9 @@ extern "C" {
 #define XIICPS_EVENT_RX_OVR			0x0080U  /**< RX overflow */
 #define XIICPS_EVENT_TX_OVR			0x0100U  /**< TX overflow */
 #define XIICPS_EVENT_RX_UNF			0x0200U  /**< RX underflow */
-/*@}*/
+/** @} */
 
-/** @name Role constants
+/** name Role constants
  *
  * These constants are used to pass into the device setup routines to
  * set up the device according to transfer direction.
@@ -239,7 +244,7 @@ extern "C" {
 #define RECVING_ROLE		0  /**< Transfer direction is receiving */
 
 
-#define XIICPS_MAX_TRANSFER_SIZE	(u32)(255U - 3U) /**< Max transfer size */
+#define XIICPS_MAX_TRANSFER_SIZE	((u32)255U - (u32)3U) /**< Max transfer size */
 
 /**************************** Type Definitions *******************************/
 
@@ -261,7 +266,7 @@ typedef void (*XIicPs_IntrHandler) (void *CallBackRef, u32 StatusEvent);
  */
 typedef struct {
 	u16 DeviceId;     /**< Unique ID  of device */
-	u32 BaseAddress;  /**< Base address of the device */
+	UINTPTR BaseAddress;  /**< Base address of the device */
 	u32 InputClockHz; /**< Input clock frequency */
 #if defined  (XCLOCKING)
 	u32 RefClk;	  /**< Input clocks */
@@ -274,32 +279,52 @@ typedef struct {
  * to a variable of this type is then passed to the driver API functions.
  */
 typedef struct {
-	XIicPs_Config Config;	/* Configuration structure */
-	u32 IsReady;		/* Device is initialized and ready */
-	u32 Options;		/* Options set in the device */
+	XIicPs_Config Config;	/**< Configuration structure */
+	u32 IsReady;		/**< Device is initialized and ready */
+	u32 Options;		/**< Options set in the device */
 
-	u8 *SendBufferPtr;	/* Pointer to send buffer */
-	u8 *RecvBufferPtr;	/* Pointer to recv buffer */
-	s32 SendByteCount;	/* Number of bytes still expected to send */
-	s32 RecvByteCount;	/* Number of bytes still expected to receive */
-	s32 CurrByteCount;	/* No. of bytes expected in current transfer */
+	u8 *SendBufferPtr;	/**< Pointer to send buffer */
+	u8 *RecvBufferPtr;	/**< Pointer to recv buffer */
+	s32 SendByteCount;	/**< Number of bytes still expected to send */
+	s32 RecvByteCount;	/**< Number of bytes still expected to receive */
+	s32 CurrByteCount;	/**< No. of bytes expected in current transfer */
 
-	s32 UpdateTxSize;	/* If tx size register has to be updated */
-	s32 IsSend;		/* Whether master is sending or receiving */
-	s32 IsRepeatedStart;	/* Indicates if user set repeated start */
-	s32 Is10BitAddr;	/* Indicates if user set 10 bit address */
+	s32 UpdateTxSize;	/**< If tx size register has to be updated */
+	s32 IsSend;		/**< Whether master is sending or receiving */
+	s32 IsRepeatedStart;	/**< Indicates if user set repeated start */
+	s32 Is10BitAddr;	/**< Indicates if user set 10 bit address */
 
-	XIicPs_IntrHandler StatusHandler;  /* Event handler function */
+	XIicPs_IntrHandler StatusHandler;  /**< Event handler function */
 #if defined  (XCLOCKING)
 	u32 IsClkEnabled;	/**< Input clock enabled */
 #endif
-	void *CallBackRef;	/* Callback reference for event handler */
+	void *CallBackRef;	/**< Callback reference for event handler */
 } XIicPs;
+
+/************************** Variable Definitions *****************************/
+extern XIicPs_Config XIicPs_ConfigTable[];	/**< Configuration table */
 
 /***************** Macros (Inline Functions) Definitions *********************/
 /****************************************************************************/
 /**
 *
+* This function is to check if Rx data is valid or not.
+*
+* @param        InstancePtr	pointer to the XIicPs instance.
+*
+* @return       returns '1' if Rx data is valid, '0' otherwise.
+*
+* @note         None.
+*
+******************************************************************************/
+static INLINE u32 XIicPs_RxDataValidStatus(XIicPs *InstancePtr)
+{
+	return ((XIicPs_ReadReg(InstancePtr->Config.BaseAddress, XIICPS_SR_OFFSET))
+				& XIICPS_SR_RXDV_MASK);
+}
+
+/****************************************************************************/
+/**
 * Place one byte into the transmit FIFO.
 *
 * @param	InstancePtr is the instance of IIC
@@ -347,13 +372,14 @@ typedef struct {
 
 /************************** Function Prototypes ******************************/
 
-/*
+/**
  * Function for configuration lookup, in xiicps_sinit.c
  */
 XIicPs_Config *XIicPs_LookupConfig(u16 DeviceId);
 
-/*
+/**
  * Functions for general setup, in xiicps.c
+ * @{
  */
 s32 XIicPs_CfgInitialize(XIicPs *InstancePtr, XIicPs_Config * ConfigPtr,
 				  u32 EffectiveAddr);
@@ -363,15 +389,17 @@ void XIicPs_Reset(XIicPs *InstancePtr);
 
 s32 XIicPs_BusIsBusy(XIicPs *InstancePtr);
 s32 TransmitFifoFill(XIicPs *InstancePtr);
+/** @} */
 
-/*
+/**
  * Functions for interrupts, in xiicps_intr.c
  */
 void XIicPs_SetStatusHandler(XIicPs *InstancePtr, void *CallBackRef,
 				  XIicPs_IntrHandler FunctionPtr);
 
-/*
+/**
  * Functions for device as master, in xiicps_master.c
+ * @{
  */
 void XIicPs_MasterSend(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount,
 		u16 SlaveAddr);
@@ -384,9 +412,11 @@ s32 XIicPs_MasterRecvPolled(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount,
 void XIicPs_EnableSlaveMonitor(XIicPs *InstancePtr, u16 SlaveAddr);
 void XIicPs_DisableSlaveMonitor(XIicPs *InstancePtr);
 void XIicPs_MasterInterruptHandler(XIicPs *InstancePtr);
+/** @} */
 
-/*
+/**
  * Functions for device as slave, in xiicps_slave.c
+ * @{
  */
 void XIicPs_SetupSlave(XIicPs *InstancePtr, u16 SlaveAddr);
 void XIicPs_SlaveSend(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount);
@@ -394,14 +424,18 @@ void XIicPs_SlaveRecv(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount);
 s32 XIicPs_SlaveSendPolled(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount);
 s32 XIicPs_SlaveRecvPolled(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount);
 void XIicPs_SlaveInterruptHandler(XIicPs *InstancePtr);
+void XIicPsSclHold(XIicPs *InstancePtr, u8 Enable);
+void XIicPsSetTimeOut(XIicPs *InstancePtr, u8 Value);
+/** @} */
 
-/*
+/**
  * Functions for selftest, in xiicps_selftest.c
  */
 s32 XIicPs_SelfTest(XIicPs *InstancePtr);
 
-/*
+/**
  * Functions for setting and getting data rate, in xiicps_options.c
+ * @{
  */
 s32 XIicPs_SetOptions(XIicPs *InstancePtr, u32 Options);
 s32 XIicPs_ClearOptions(XIicPs *InstancePtr, u32 Options);
@@ -409,6 +443,7 @@ u32 XIicPs_GetOptions(XIicPs *InstancePtr);
 
 s32 XIicPs_SetSClk(XIicPs *InstancePtr, u32 FsclHz);
 u32 XIicPs_GetSClk(XIicPs *InstancePtr);
+/** @} */
 
 #ifdef __cplusplus
 }

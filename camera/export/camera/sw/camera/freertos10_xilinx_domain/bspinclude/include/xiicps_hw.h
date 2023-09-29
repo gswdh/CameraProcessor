@@ -1,5 +1,6 @@
 /******************************************************************************
-* Copyright (C) 2010 - 2020 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2010 - 2021 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2022 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -7,10 +8,10 @@
 /**
 *
 * @file xiicps_hw.h
-* @addtogroup iicps_v3_12
+* @addtogroup iicps Overview
 * @{
 *
-* This header file contains the hardware definition for an IIC device.
+* The xiicps_hw.h header file contains the hardware definition for an IIC device.
 * It includes register definitions and interface functions to read/write
 * the registers.
 *
@@ -28,7 +29,7 @@
 *
 ******************************************************************************/
 #ifndef XIICPS_HW_H		/* prevent circular inclusions */
-#define XIICPS_HW_H		/* by using protection macros */
+#define XIICPS_HW_H		/**< by using protection macros */
 
 #ifdef __cplusplus
 extern "C" {
@@ -58,15 +59,15 @@ extern "C" {
 #define XIICPS_IMR_OFFSET			0x20U  /**< Interrupt Enabled Mask */
 #define XIICPS_IER_OFFSET			0x24U  /**< Interrupt Enable */
 #define XIICPS_IDR_OFFSET			0x28U  /**< Interrupt Disable */
-/* @} */
+/** @} */
 
+/** @cond INTERNAL */
 /** @name Control Register
  *
  * This register contains various control bits that
  * affects the operation of the IIC controller. Read/Write.
  * @{
  */
-
 #define XIICPS_CR_DIV_A_MASK	0x0000C000U /**< Clock Divisor A */
 #define XIICPS_CR_DIV_A_SHIFT			14U /**< Clock Divisor A shift */
 #define XIICPS_DIV_A_MAX				 4U /**< Maximum value of Divisor A */
@@ -87,7 +88,7 @@ extern "C" {
 												1=Receiver*/
 #define XIICPS_CR_RESET_VALUE			 0U /**< Reset value of the Control
 												register */
-/* @} */
+/** @} */
 
 /** @name IIC Status Register
  *
@@ -99,7 +100,7 @@ extern "C" {
 #define XIICPS_SR_TXDV_MASK		0x00000040U  /**< Transmit Data Valid Mask */
 #define XIICPS_SR_RXDV_MASK		0x00000020U  /**< Receiver Data Valid Mask */
 #define XIICPS_SR_RXRW_MASK		0x00000008U  /**< Receive read/write Mask */
-/* @} */
+/** @} */
 
 /** @name IIC Address Register
  *
@@ -109,7 +110,7 @@ extern "C" {
  * @{
  */
 #define XIICPS_ADDR_MASK	0x000003FF  /**< IIC Address Mask */
-/* @} */
+/** @} */
 
 /** @name IIC Data Register
  *
@@ -118,7 +119,8 @@ extern "C" {
  * @{
  */
 #define XIICPS_DATA_MASK	0x000000FF  /**< IIC Data Mask */
-/* @} */
+/** @} */
+/** @endcond */
 
 /** @name IIC Interrupt Registers
  *
@@ -175,9 +177,9 @@ extern "C" {
 													Interrupt mask */
 #define XIICPS_IXR_DEFAULT_MASK   0x000002FFU	 /**< Default ISR Mask */
 #define XIICPS_IXR_ALL_INTR_MASK  0x000002FFU	 /**< All ISR Mask */
-/* @} */
+/** @} */
 
-
+/** @cond INTERNAL */
 /** @name IIC Transfer Size Register
 *
 * The register's meaning varies according to the operating mode as follows:
@@ -196,7 +198,7 @@ extern "C" {
 #define XIICPS_TRANS_SIZE_MASK  0x0000003F /**< IIC Transfer Size Mask */
 #define XIICPS_FIFO_DEPTH          16	  /**< Number of bytes in the FIFO */
 #define XIICPS_DATA_INTR_DEPTH     14    /**< Number of bytes at DATA intr */
-/* @} */
+/** @} */
 
 
 /** @name IIC Slave Monitor Pause Register
@@ -215,7 +217,7 @@ extern "C" {
 * @{
 */
 #define XIICPS_SLV_PAUSE_MASK    0x0000000F  /**< Slave monitor pause mask */
-/* @} */
+/** @} */
 
 
 /** @name IIC Time Out Register
@@ -233,15 +235,16 @@ extern "C" {
  */
 #define XIICPS_TIME_OUT_MASK    0x000000FFU    /**< IIC Time Out mask */
 #define XIICPS_TO_RESET_VALUE   0x000000FFU    /**< IIC Time Out reset value */
-/* @} */
+/** @} */
 
 /**************************** Type Definitions *******************************/
 
 /***************** Macros (Inline Functions) Definitions *********************/
 
-#define XIicPs_In32 Xil_In32
-#define XIicPs_Out32 Xil_Out32
+#define XIicPs_In32 Xil_In32		/**< XIicPs read */
+#define XIicPs_Out32 Xil_Out32		/**< XIicPs write */
 #define XIICPS_POLL_DEFAULT_TIMEOUT_VAL		1000U /**< Timeout in us */
+/** @endcond */
 
 /****************************************************************************/
 /**
@@ -350,7 +353,9 @@ extern "C" {
 /*
  * Perform reset operation to the I2c interface
  */
-void XIicPs_ResetHw(u32 BaseAddress);
+/** @cond INTERNAL */
+void XIicPs_ResetHw(UINTPTR BaseAddress);
+/** @endcond */
 #ifdef __cplusplus
 }
 #endif

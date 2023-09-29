@@ -1,0 +1,10 @@
+20:34:43 **** Incremental Build of configuration Debug for project xaxidma_example_simple_poll_1 ****
+make all 
+C:/Vitis/Vitis/2023.1/gnuwin/bin/make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+C:/Vitis/Vitis/2023.1/gnuwin/bin/make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+
+20:34:44 Build Finished (took 328ms)
+

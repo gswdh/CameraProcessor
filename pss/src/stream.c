@@ -29,67 +29,36 @@ XAxiDma dma = {0};
 void strm_init(strm_callback cb)
 {
 	// Init the DMA
-	XAxiDma_Config *config = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
-	XAxiDma_CfgInitialize(&dma, config);
+	XAxiDma_Config *dma_config = XAxiDma_LookupConfig(XPAR_AXIDMA_0_DEVICE_ID);
+	XAxiDma_CfgInitialize(&dma, dma_config);
+
+	// Disable interrupts
 	XAxiDma_IntrDisable(&dma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
 	XAxiDma_IntrDisable(&dma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
-
-	// TX init
-	XAxiDma_BdRing *tx_ring = XAxiDma_GetTxRing(&dma);
-	XAxiDma_BdRingIntDisable(tx_ring, XAXIDMA_IRQ_ALL_MASK);
-	XAxiDma_BdRingSetCoalesce(tx_ring, true, 0);
-	uint32_t bd_cnt = XAxiDma_BdRingCntCalc(XAXIDMA_BD_MINIMUM_ALIGNMENT, TX_BD_SPACE_HIGH - TX_BD_SPACE_BASE + 1);
-	XAxiDma_BdRingCreate(tx_ring, TX_BD_SPACE_BASE, TX_BD_SPACE_BASE, XAXIDMA_BD_MINIMUM_ALIGNMENT, bd_cnt);
-
-	XAxiDma_Bd bd_template = {0};
-	XAxiDma_BdClear(&bd_template);
-	XAxiDma_BdRingClone(tx_ring, &bd_template);
-	XAxiDma_BdRingStart(tx_ring);
-
-	// RX init
 
 	// Start the task
 	TaskHandle_t strm_task_handle = {0};
 	xTaskCreate(strm_task, LOG_TAG, 1024, NULL, tskIDLE_PRIORITY, &strm_task_handle);
 }
 
-void strm_send(uint8_t * data, uint32_t len)
+void strm_tx(uint8_t * data, uint32_t len)
 {
-	XAxiDma_Bd * bd;
-	XAxiDma_BdRing * tx_ring = XAxiDma_GetTxRing(&dma);
-
-	XAxiDma_BdRingAlloc(tx_ring, 1, &bd);
-	XAxiDma_BdSetBufAddr(bd, (UINTPTR)data);
-	XAxiDma_BdSetLength(bd, len, tx_ring->MaxTransferLen);
-	XAxiDma_BdSetCtrl(bd, XAXIDMA_BD_CTRL_TXEOF_MASK | XAXIDMA_BD_CTRL_TXSOF_MASK);
-	XAxiDma_BdSetId(bd, (UINTPTR)data);
-	XAxiDma_BdRingToHw(tx_ring, 1, bd);
+	Xil_DCacheFlushRange((UINTPTR)data, len);
+	XAxiDma_SimpleTransfer(&dma, (UINTPTR)data, len, XAXIDMA_DMA_TO_DEVICE);
 }
 
-void strm_receive_init(uint8_t * data, uint32_t len)
+void strm_rx(uint8_t * data, uint32_t len)
 {
+	Xil_DCacheFlushRange((UINTPTR)data, len);
 	XAxiDma_SimpleTransfer(&dma, (UINTPTR)data, len, XAXIDMA_DEVICE_TO_DMA);
 }
 
-bool strm_send_done()
+bool strm_tx_done()
 {
-	XAxiDma_Bd *bd;
-	XAxiDma_BdRing * tx_ring = XAxiDma_GetTxRing(&dma);
-
-	// Wait until the one BD TX transaction is done
-	uint32_t processed = 0;
-	while (processed == 0)
-	{
-		processed = XAxiDma_BdRingFromHw(tx_ring, XAXIDMA_ALL_BDS, &bd);
-	}
-
-	// Free all processed TX BDs for future transmission
-	XAxiDma_BdRingFree(tx_ring, processed, bd);
-
-	return true;
+	return (bool)!XAxiDma_Busy(&dma, XAXIDMA_DMA_TO_DEVICE);
 }
 
-bool strm_receive_done()
+bool strm_rx_done()
 {
 	return (bool)!XAxiDma_Busy(&dma, XAXIDMA_DEVICE_TO_DMA);
 }
@@ -97,18 +66,23 @@ bool strm_receive_done()
 void strm_task(void * params)
 {
 
-	uint8_t data[1024] = {0};
-	memset(data, 0x55, 1024);
-	
+	uint8_t x[32] = {0};
+	memset(x, 0x55, 32);
+
+	uint8_t y[32] = {0};
+	memset(y, 0xFF, 32);
+
 	uint32_t tick = sys_tick_ms();
 
 	while(1)
 	{
 		if(sys_tick_ms() > (tick + 100))
 		{
-			strm_send(data, 16);
+			memset(y, 0x00, 32);
+			strm_rx(y, 32);
+			strm_tx(x, 32);
 
-			while(!strm_send_done())
+			while(!strm_tx_done() && !strm_rx_done())
 			{
 				asm("NOP");
 			}

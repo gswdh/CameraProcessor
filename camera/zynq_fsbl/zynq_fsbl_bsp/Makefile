@@ -16,7 +16,7 @@ endif
 
 all: 
 	$(MAKE) --no-print-directory seq_libs
-	$(MAKE) -j --no-print-directory par_libs
+	$(MAKE) -j 2 --no-print-directory par_libs
 	$(MAKE) --no-print-directory archive
 	@echo 'Finished building libraries'
 
@@ -29,7 +29,7 @@ par_libs: $(addsuffix /make.libs,$(PAR_SUBDIRS))
 	@echo 'Finished building libraries parallelly.'
 
 archive:
-	arm-none-eabi-ar -r  $(LIBRARIES) $(wildcard $(PROCESSOR)/lib/*.o)
+	arm-none-eabi-ar -r  $(LIBRARIES) $(sort $(wildcard $(PROCESSOR)/lib/*.o))
 
 clean: $(addsuffix /make.clean,$(SUBDIRS))
 	rm -f ${PROCESSOR}/lib/libxil.a
@@ -39,11 +39,11 @@ $(PROCESSOR)/lib/libxil.a: $(PROCESSOR)/lib/libxil_init.a
 
 %/make.include: $(if $(wildcard $(PROCESSOR)/lib/libxil_init.a),$(PROCESSOR)/lib/libxil.a,)
 	@echo "Running Make include in $(subst /make.include,,$@)"
-	$(MAKE) -C $(subst /make.include,,$@) -s include  "SHELL=$(SHELL)" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+	$(MAKE) -C $(subst /make.include,,$@) -s include  "SHELL=$(SHELL)" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
 
 %/make.libs: include
 	@echo "Running Make libs in $(subst /make.libs,,$@)"
-	$(MAKE) -C $(subst /make.libs,,$@) -s libs  "SHELL=$(SHELL)" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+	$(MAKE) -C $(subst /make.libs,,$@) -s libs  "SHELL=$(SHELL)" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
 
 %/make.clean: 
 	$(MAKE) -C $(subst /make.clean,,$@) -s clean 
