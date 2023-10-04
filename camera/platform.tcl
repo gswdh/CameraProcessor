@@ -19,3 +19,32 @@ platform generate
 bsp reload
 platform generate -domains freertos10_xilinx_domain 
 platform generate -domains freertos10_xilinx_domain 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+bsp reload
+catch {bsp regenerate}
+platform active {camera}
+bsp reload
+bsp setlib -name xilffs -ver 5.0
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform active {camera}
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains freertos10_xilinx_domain 
+platform active {camera}
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains freertos10_xilinx_domain 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains freertos10_xilinx_domain 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains freertos10_xilinx_domain 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform active {camera}
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+bsp reload
+domain active {zynq_fsbl}
+bsp reload
+platform generate -domains 

@@ -475,44 +475,6 @@
 
 /******************************************************************/
 
-/* Definitions for driver SPI */
-#define XPAR_XSPI_NUM_INSTANCES 1U
-
-/* Definitions for peripheral AXI_QUAD_SPI_0 */
-#define XPAR_AXI_QUAD_SPI_0_DEVICE_ID 0U
-#define XPAR_AXI_QUAD_SPI_0_BASEADDR 0x41E00000U
-#define XPAR_AXI_QUAD_SPI_0_HIGHADDR 0x41E0FFFFU
-#define XPAR_AXI_QUAD_SPI_0_FIFO_EXIST 1U
-#define XPAR_AXI_QUAD_SPI_0_FIFO_DEPTH 16U
-#define XPAR_AXI_QUAD_SPI_0_SPI_SLAVE_ONLY 0U
-#define XPAR_AXI_QUAD_SPI_0_NUM_SS_BITS 1U
-#define XPAR_AXI_QUAD_SPI_0_NUM_TRANSFER_BITS 8U
-#define XPAR_AXI_QUAD_SPI_0_SPI_MODE 0U
-#define XPAR_AXI_QUAD_SPI_0_TYPE_OF_AXI4_INTERFACE 0U
-#define XPAR_AXI_QUAD_SPI_0_AXI4_BASEADDR 0U
-#define XPAR_AXI_QUAD_SPI_0_AXI4_HIGHADDR 0U
-#define XPAR_AXI_QUAD_SPI_0_XIP_MODE 0U
-
-/* Canonical definitions for peripheral AXI_QUAD_SPI_0 */
-#define XPAR_SPI_0_DEVICE_ID 0U
-#define XPAR_SPI_0_BASEADDR 0x41E00000U
-#define XPAR_SPI_0_HIGHADDR 0x41E0FFFFU
-#define XPAR_SPI_0_FIFO_EXIST 1U
-#define XPAR_SPI_0_FIFO_DEPTH 16U
-#define XPAR_SPI_0_SPI_SLAVE_ONLY 0U
-#define XPAR_SPI_0_NUM_SS_BITS 1U
-#define XPAR_SPI_0_NUM_TRANSFER_BITS 8U
-#define XPAR_SPI_0_SPI_MODE 0U
-#define XPAR_SPI_0_TYPE_OF_AXI4_INTERFACE 0U
-#define XPAR_SPI_0_AXI4_BASEADDR 0U
-#define XPAR_SPI_0_AXI4_HIGHADDR 0U
-#define XPAR_SPI_0_XIP_MODE 0U
-#define XPAR_SPI_0_USE_STARTUP 0U
-
-
-
-/******************************************************************/
-
 /* Definitions for driver UARTPS */
 #define XPAR_XUARTPS_NUM_INSTANCES 2
 
@@ -572,4 +534,11 @@
 
 /******************************************************************/
 
+/* Xilinx FAT File System Library (XilFFs) User Settings */
+#define FILE_SYSTEM_INTERFACE_SD
+#define FILE_SYSTEM_USE_MKFS
+#define FILE_SYSTEM_NUM_LOGIC_VOL 2
+#define FILE_SYSTEM_USE_STRFUNC 0
+#define FILE_SYSTEM_SET_FS_RPATH 0
+#define FILE_SYSTEM_WORD_ACCESS
 #endif  /* end of protection macro */

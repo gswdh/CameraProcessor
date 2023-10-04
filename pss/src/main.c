@@ -11,7 +11,6 @@
 
 // Peripheral includes
 #include "gpio.h"
-#include "spi.h"
 #include "stream.h"
 
 // Abstraction includes
@@ -31,7 +30,6 @@ void main_task(void * params)
 	log_info(LOG_TAG, "Starting system.\n");
 
 	// Perph inits (must be done before abstraction)
-	spi_init();
 	gpio_init();
 	strm_init(strm_event_cb);
 
@@ -45,7 +43,7 @@ void main_task(void * params)
 int main(void)
 {
 	TaskHandle_t main_task_handle = {0};
-	xTaskCreate(main_task, "MAIN", 1024, NULL, tskIDLE_PRIORITY, &main_task_handle);
+	xTaskCreate(main_task, LOG_TAG, 1024, NULL, tskIDLE_PRIORITY, &main_task_handle);
 
 	vTaskStartScheduler();
 	

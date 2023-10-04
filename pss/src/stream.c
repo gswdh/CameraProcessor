@@ -66,28 +66,20 @@ bool strm_rx_done()
 void strm_task(void * params)
 {
 
-	uint8_t x[32] = {0};
-	memset(x, 0x55, 32);
+	uint8_t * x = malloc(5120*5120*2);
 
-	uint8_t y[32] = {0};
-	memset(y, 0xFF, 32);
-
-	uint32_t tick = sys_tick_ms();
+	while(x == NULL)
+	{
+		asm("NOP");
+	}
 
 	while(1)
 	{
-		if(sys_tick_ms() > (tick + 100))
+		strm_tx(x, 1024);
+
+		while(!strm_tx_done())
 		{
-			memset(y, 0x00, 32);
-			strm_rx(y, 32);
-			strm_tx(x, 32);
-
-			while(!strm_tx_done() && !strm_rx_done())
-			{
-				asm("NOP");
-			}
-
-			tick = sys_tick_ms();
+			asm("NOP");
 		}
 	}
 }

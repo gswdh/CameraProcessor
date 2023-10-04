@@ -122,12 +122,14 @@ void gpio_task(void *params)
 			sys_delay_ms(1);
 			gpio_pl_set(FPGA_LED_D0, false);
 
+			/*
 			log_info(LOG_TAG, "TL = %u, TR = %u, BL = %u, BR = %u, TM = %u\n",
 					gpio_get(BTN_TOPLEFT_PIN),
 					gpio_get(BTN_TOPRIGHT_PIN),
 					gpio_get(BTN_BTMLEFT_PIN),
 					gpio_get(BTN_BTMRIGHT_PIN),
 					gpio_get(BTN_THUMB_PIN));
+					*/
 		}
 	}
 }

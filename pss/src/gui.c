@@ -1,7 +1,6 @@
 #include "gui.h"
 
 // Perphs
-#include "spi.h"
 #include "gpio.h"
 
 // Abstractions
@@ -21,7 +20,7 @@ TaskHandle_t gui_task_handle = {0};
 
 void ssd_spi_write(uint8_t * data, uint32_t len)
 {
-	spi_write(data, len);
+	//spi_write(data, len);
 }
 
 void ssd_set_dc(bool en)
