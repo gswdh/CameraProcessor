@@ -48,3 +48,28 @@ bsp reload
 domain active {zynq_fsbl}
 bsp reload
 platform generate -domains 
+platform active {camera}
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains freertos10_xilinx_domain 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform clean
+platform generate
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform clean
+platform generate
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform config -updatehw {C:/Users/georgewaller/Desktop/CameraFPGA/camera.xsa}
+platform generate -domains 

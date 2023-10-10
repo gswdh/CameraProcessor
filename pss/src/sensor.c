@@ -11,8 +11,17 @@
 // FreeRTOS
 #include "FreeRTOS.h"
 #include "task.h"
+#include "xgpio.h"
 
 #define LOG_TAG "SENSOR"
+
+#define SENSOR_GPIO_INPUT_PORT (0x01)
+#define SENSOR_GPIO_OUTPUT_PORT (0x02)
+#define SENSOR_GPIO_SYNC_EN (0x1000)
+#define SENSOR_GPIO_SYNC_DONE (0x0001)
+#define SENSOR_TRAINING_WORD (0xD0E)
+
+XGpio sensor_gpio_pl = {0};
 
 TaskHandle_t sensor_task_handle = {0};
 
@@ -250,10 +259,77 @@ void gmax_delay_ms(uint32_t time_ms)
 	sys_delay_ms(time_ms);
 }
 
+uint16_t sensor_read_training_word()
+{
+	uint8_t data[3] = {0};
+	gmax_spi_read(214, data, 3);
+
+	uint16_t word = 0;
+
+	return word;
+}
+
+void sensor_init_control()
+{
+	XGpio_Initialize(&sensor_gpio_pl, XPAR_GPIO_1_DEVICE_ID);
+	XGpio_SetDataDirection(&sensor_gpio_pl, SENSOR_GPIO_OUTPUT_PORT, 0x00000000);
+	XGpio_SetDataDirection(&sensor_gpio_pl, SENSOR_GPIO_INPUT_PORT, 0xFFFFFFFF);
+}
+
+void sensor_set_training_word(uint16_t training_word)
+{
+	uint32_t data = XGpio_DiscreteRead(&sensor_gpio_pl, SENSOR_GPIO_OUTPUT_PORT);
+	data &= ~0x0FFF;
+	data |= (training_word & 0x0FFF);
+	XGpio_DiscreteWrite(&sensor_gpio_pl, SENSOR_GPIO_OUTPUT_PORT, data);
+}
+
+void sensor_set_sync(bool en)
+{
+	uint32_t data = XGpio_DiscreteRead(&sensor_gpio_pl, SENSOR_GPIO_OUTPUT_PORT);
+	data = en ? (data |= SENSOR_GPIO_SYNC_EN) : (data &= ~SENSOR_GPIO_SYNC_EN);
+	XGpio_DiscreteWrite(&sensor_gpio_pl, SENSOR_GPIO_OUTPUT_PORT, data);
+}
+
+bool sensor_get_sync()
+{
+	uint32_t data = XGpio_DiscreteRead(&sensor_gpio_pl, SENSOR_GPIO_INPUT_PORT);
+	return (bool)(data & SENSOR_GPIO_SYNC_DONE);
+}
+
+void sensor_sync_data(uint16_t training_word)
+{
+	// Check if it's done already
+	if(sensor_get_sync())
+	{
+		return;
+	}
+
+	// Set the training word
+	uint16_t word = sensor_read_training_word();
+	sensor_set_training_word(word);
+
+	// Enable the syncing
+	sensor_set_sync(true);
+
+	// Wait for the syncing to be done
+	while(!sensor_get_sync())
+	{
+		sys_delay_ms(1);
+	}
+
+	// Disable the syncing
+	sensor_set_sync(false);
+}
+
 void sensor_start()
 {
 	// Power up the sensor
 	gmax_start();
+
+	// Get the data syncd
+	sensor_init_control();
+	sensor_sync_data(SENSOR_TRAINING_WORD);
 
 	// Start the running task
 	xTaskCreate(sensor_task, LOG_TAG, 1024, NULL, tskIDLE_PRIORITY, &sensor_task_handle);

@@ -15,6 +15,9 @@
 
 #define LOG_TAG "STRM"
 
+bool tx_in_progress = false;
+bool rx_in_progress = false;
+
 XAxiDma dma = {0};
 
 #define MEM_BASE_ADDR		(XPAR_PS7_DDR_0_S_AXI_BASEADDR + 0x1000000)
@@ -45,26 +48,60 @@ void strm_tx(uint8_t * data, uint32_t len)
 {
 	Xil_DCacheFlushRange((UINTPTR)data, len);
 	XAxiDma_SimpleTransfer(&dma, (UINTPTR)data, len, XAXIDMA_DMA_TO_DEVICE);
+	tx_in_progress = true;
 }
 
 void strm_rx(uint8_t * data, uint32_t len)
 {
 	Xil_DCacheFlushRange((UINTPTR)data, len);
 	XAxiDma_SimpleTransfer(&dma, (UINTPTR)data, len, XAXIDMA_DEVICE_TO_DMA);
+	rx_in_progress = true;
 }
 
 bool strm_tx_done()
 {
-	return (bool)!XAxiDma_Busy(&dma, XAXIDMA_DMA_TO_DEVICE);
+	if(tx_in_progress)
+	{
+		if(XAxiDma_Busy(&dma, XAXIDMA_DMA_TO_DEVICE))
+		{
+			return false;
+		}
+
+		else
+		{
+			tx_in_progress = false;
+			return true;
+		}
+	}
+
+	return true;
 }
 
 bool strm_rx_done()
 {
-	return (bool)!XAxiDma_Busy(&dma, XAXIDMA_DEVICE_TO_DMA);
+	if(rx_in_progress)
+	{
+		if(XAxiDma_Busy(&dma, XAXIDMA_DEVICE_TO_DMA))
+		{
+			return false;
+		}
+
+		else
+		{
+			rx_in_progress = false;
+			return true;
+		}
+	}
+
+	return true;
 }
 
 void strm_task(void * params)
 {
+	while(1)
+	{
+		sys_delay_ms(100);
+	}
 
 	uint8_t * x = malloc(5120*5120*2);
 
@@ -75,11 +112,13 @@ void strm_task(void * params)
 
 	while(1)
 	{
-		strm_tx(x, 1024);
+		strm_tx(x, 5120*5120*2);
 
 		while(!strm_tx_done())
 		{
 			asm("NOP");
 		}
+
+		asm("NOP");
 	}
 }
