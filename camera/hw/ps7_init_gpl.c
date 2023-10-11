@@ -61,7 +61,7 @@ unsigned long ps7_pll_init_data_3_0[] = {
     // .. .. .. ==> 0XF8000100[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000100, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000100, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -139,7 +139,7 @@ unsigned long ps7_pll_init_data_3_0[] = {
     // .. .. .. ==> 0XF8000104[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000104, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000104, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -208,7 +208,7 @@ unsigned long ps7_pll_init_data_3_0[] = {
     // .. .. .. ==> 0XF8000108[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000108, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000108, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -3972,7 +3972,7 @@ unsigned long ps7_pll_init_data_2_0[] = {
     // .. .. .. ==> 0XF8000100[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000100, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000100, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -4050,7 +4050,7 @@ unsigned long ps7_pll_init_data_2_0[] = {
     // .. .. .. ==> 0XF8000104[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000104, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000104, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -4119,7 +4119,7 @@ unsigned long ps7_pll_init_data_2_0[] = {
     // .. .. .. ==> 0XF8000108[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000108, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000108, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -8042,7 +8042,7 @@ unsigned long ps7_pll_init_data_1_0[] = {
     // .. .. .. ==> 0XF8000100[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000100, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000100, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -8120,7 +8120,7 @@ unsigned long ps7_pll_init_data_1_0[] = {
     // .. .. .. ==> 0XF8000104[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000104, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000104, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1
@@ -8189,7 +8189,7 @@ unsigned long ps7_pll_init_data_1_0[] = {
     // .. .. .. ==> 0XF8000108[4:4] = 0x00000001U
     // .. .. ..     ==> MASK : 0x00000010U    VAL : 0x00000010U
     // .. .. .. 
-    EMIT_MASKWRITE(0XF8000108, 0x00000018U ,0x00000010U),
+    EMIT_MASKWRITE(0XF8000108, 0x00000010U ,0x00000010U),
     // .. .. .. FINISH: BY PASS PLL
     // .. .. .. START: ASSERT RESET
     // .. .. .. PLL_RESET = 1

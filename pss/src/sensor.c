@@ -264,7 +264,7 @@ uint16_t sensor_read_training_word()
 	uint8_t data[3] = {0};
 	gmax_spi_read(214, data, 3);
 
-	uint16_t word = 0;
+	uint16_t word = 0x03D0;
 
 	return word;
 }
@@ -309,8 +309,6 @@ void sensor_sync_data(uint16_t training_word)
 	uint16_t word = sensor_read_training_word();
 	sensor_set_training_word(word);
 
-	// Enable the syncing
-	sensor_set_sync(true);
 
 	// Wait for the syncing to be done
 	while(!sensor_get_sync())

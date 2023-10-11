@@ -676,3 +676,15 @@ timestamp=[2023-10-10 20:39:52], mode=BUILD, duration=0:00:08.334, duration_ms=8
 timestamp=[2023-10-10 21:34:21], mode=PLATFORM_GENERATION, duration=0:00:27.690, duration_ms=27690, data={name=camera}
 timestamp=[2023-10-10 21:35:25], mode=BUILD, duration=0:00:02.774, duration_ms=2774, data={name=pss, configuration=Debug, clean_build=false}
 timestamp=[2023-10-10 21:35:43], mode=BUILD, duration=0:00:08.669, duration_ms=8669, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:01:11], mode=WORKBENCH_START, duration=0:00:09.240, duration_ms=9240, data={}
+timestamp=[2023-10-11 09:01:12], mode=WORKBENCH_UI_INIT, duration=0:00:00.984, duration_ms=984, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,camera,pss,pss_system}
+timestamp=[2023-10-11 09:01:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.081, duration_ms=81, data={}
+timestamp=[2023-10-11 09:05:59], mode=PLATFORM_GENERATION, duration=0:00:41.102, duration_ms=41102, data={name=camera}
+timestamp=[2023-10-11 09:06:07], mode=BUILD, duration=0:00:02.814, duration_ms=2814, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:06:16], mode=BUILD, duration=0:00:08.353, duration_ms=8353, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:27:46], mode=BUILD, duration=0:00:01.519, duration_ms=1519, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:27:55], mode=BUILD, duration=0:00:08.411, duration_ms=8411, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:28:26], mode=BUILD, duration=0:00:00.567, duration_ms=567, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:28:35], mode=BUILD, duration=0:00:08.330, duration_ms=8330, data={name=pss_system, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:34:34], mode=BUILD, duration=0:00:01.205, duration_ms=1205, data={name=pss, configuration=Debug, clean_build=false}
+timestamp=[2023-10-11 09:34:43], mode=BUILD, duration=0:00:07.992, duration_ms=7992, data={name=pss_system, configuration=Debug, clean_build=false}

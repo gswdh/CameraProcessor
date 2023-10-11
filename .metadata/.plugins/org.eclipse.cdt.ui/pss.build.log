@@ -1,33 +1,9 @@
-21:35:22 **** Incremental Build of configuration Debug for project pss ****
+09:34:33 **** Incremental Build of configuration Debug for project pss ****
 make all 
 C:/Vitis/Vitis/2023.1/gnuwin/bin/make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 C:/Vitis/Vitis/2023.1/gnuwin/bin/make --no-print-directory main-build
-'Building file: ../src/gpio.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
-../src/gpio.c: In function 'gpio_pl_set':
-../src/gpio.c:106:14: warning: operation on 'data' may be undefined [-Wsequence-point]
-  106 |         data = state ? (data |= pin_mask) : (data &= ~pin_mask);
-      |         ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/gpio.c'
-' '
-'Building file: ../src/gui.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/gui.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/gui.d" -MT"src/gui.o" -o "src/gui.o" "../src/gui.c"
-'Finished building: ../src/gui.c'
-' '
-'Building file: ../src/logging.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/logging.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/logging.d" -MT"src/logging.o" -o "src/logging.o" "../src/logging.c"
-'Finished building: ../src/logging.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
 'Building file: ../src/sensor.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/sensor.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/sensor.d" -MT"src/sensor.o" -o "src/sensor.o" "../src/sensor.c"
@@ -37,16 +13,6 @@ arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor
       |         ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/sensor.c'
 ' '
-'Building file: ../src/stream.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/stream.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/stream.d" -MT"src/stream.o" -o "src/stream.o" "../src/stream.c"
-'Finished building: ../src/stream.c'
-' '
-'Building file: ../src/sys.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\src" -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\ssd1309z" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\log" -I"C:\Users\georgewaller\Desktop\CameraProcessor\pss\gsembedlib\gmax0505" -c -fmessage-length=0 -MT"src/sys.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/sys.d" -MT"src/sys.o" -o "src/sys.o" "../src/sys.c"
-'Finished building: ../src/sys.c'
-' '
 'Building target: pss.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/georgewaller/Desktop/CameraProcessor/camera/export/camera/sw/camera/freertos10_xilinx_domain/bsplib/lib -o "pss.elf"  ./src/gpio.o ./src/gui.o ./src/logging.o ./src/main.o ./src/sensor.o ./src/stream.o ./src/sys.o  ./gsembedlib/ssd1309z/ssd1309z.o  ./gsembedlib/log/log.o  ./gsembedlib/gmax0505/gmax0505.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
@@ -55,9 +21,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size pss.elf  |tee "pss.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 103144	   3568	66930232	67036944	3fee710	pss.elf
+ 103272	   3568	66930232	67037072	3fee790	pss.elf
 'Finished building: pss.elf.size'
 ' '
 
-21:35:25 Build Finished (took 2s.744ms)
+09:34:34 Build Finished (took 1s.171ms)
 
