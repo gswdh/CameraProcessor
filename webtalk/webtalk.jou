@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# 
+# Start of session at: Wed Dec  6 20:37:21 2023
+# Process ID: 86812
+# Current directory: /media/psf/Home/Projects/CameraProcessor/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/psf/Home/Projects/CameraProcessor/webtalk/webtalk.log
+# Journal file: /media/psf/Home/Projects/CameraProcessor/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
